@@ -1,0 +1,567 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+	font-family: verdana, arial, sans-serif;
+	padding: 0;
+	background: #00ABBC url(../images/bg_body.jpg) no-repeat top left;
+	color: white;
+	width: 450em;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+	color: white;
+	text-decoration: none;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+h1{
+	font-size: 2em;
+	line-height: 150%;
+}
+h2{
+	font-size: 1.8em;
+	line-height: 150%;
+}
+.fontface h1, .fontface h2{
+	font-family: TrajanPro;
+}
+.logo{
+	position: fixed;
+	left: 80px;
+	bottom: 8px;
+	color: #006B91;
+	background-color: white;
+	padding: 2px 8px;
+	z-index: 10;
+	text-align: center;
+}
+.logo a, .logo a:visited{
+	color: #006B92;
+	font-size: 2.3em;
+	text-decoration: none;
+	text-shadow: #aaa 3px 3px 3px;
+}
+.logo .slogan{
+	color: #C7C3D4;
+	font-size: 1.5em;
+	border-top: 1px solid #C7C3D4;
+	padding: 3px 0;
+	margin-top: 3px;
+}
+.fontface .logo a{
+	font: 2.3em TrajanPro;
+	text-shadow: none;
+}
+.fontface .logo .slogan {
+	font: 1.4em TrajanPro;
+	text-shadow: none;
+}
+#wrap{
+	 /*background: transparent url(../images/bg_body.jpg) no-repeat top left;*/
+	overflow: hidden;
+}
+header.main{
+	float: left;	
+}
+nav.main{
+	position: relative;
+	width: 1070px;
+	height: 580px;
+	overflow: hidden;
+}
+nav.main ul{
+	position: relative;	
+	left: 90px;
+	top: -27px;
+	color: white;
+	font-weight: normal;
+}
+nav.main ul li{
+	float: left;
+	margin: 1px;	
+	text-align: center;
+	width: 147px;
+	height: 147px;
+	margin-left: 62px;
+	margin-bottom: 62px;
+	position: absolute;
+}
+nav.main ul li.hex-1{
+	left: 0;
+	top: 0;
+}
+nav.main ul li.hex-1 a, nav.main ul li.hex-2 a, nav.main ul li.hex-4 a, nav.main ul li.hex-7 a{
+	background-color: #615489;
+}
+nav.main ul li.hex-2{
+	left: 106px;
+	top: 106px;
+}
+nav.main ul li.hex-3{
+	left: 212px;
+	top: 212px;
+}
+nav.main ul li.hex-3 a{
+	background-color: #62335D;
+}
+nav.main ul li.hex-4{
+	left: 318px;
+	top: 318px;
+}
+nav.main ul li.hex-5{
+	left: 424px;
+	top: 424px;
+}
+nav.main ul li.hex-5 a, nav.main ul li.hex-6 a, nav.main ul li.hex-8 a{
+	background-color:  #787BA8;
+}
+nav.main ul li.hex-6{
+	left: 212px;
+	top: 0px;
+}
+nav.main ul li.hex-7{
+	left: 318px;
+	top: 106px;	
+}
+nav.main ul li.hex-8{
+	left: 424px;
+	top: 212px;
+}
+nav.main ul li.hex-9{
+	left: 530px;
+	top: 318px;
+}
+nav.main a{
+	background-color: #00ABBC;
+	vertical-align: middle;
+	width: 148px;
+	height: 148px;
+	display: block;
+	line-height: 9em;
+	font-size: 90%;
+}
+nav.main a:hover, nav.main ul li.hex-1 a:hover, nav.main ul li.hex-2 a:hover, nav.main ul li.hex-3 a:hover, nav.main ul li.hex-4 a:hover, nav.main ul li.hex-7 a:hover, nav.main ul li.hex-8 a:hover, nav.main ul li.hex-9 a:hover{
+	background-color: #ff9900;
+	transition: all 1s ease;
+	font-size: 100%;
+}
+.csstransforms nav.main ul li a{
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	transform: rotate(-45deg);
+}
+.csstransforms nav.main ul li a span{
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-1);
+	transform: rotate(45deg);
+	display: block;
+}
+a.plus{
+	text-align: left;
+	float: left;
+}
+section.main{
+	top: 110px;
+	left: 10px;
+	float: left;
+	position: relative;
+	padding: 10px;
+	font-size: 90%;
+}
+section.main .content{
+	text-align: right;
+	position: relative;
+	width: 400px;
+	height: 320px;
+	float: left;
+	margin-right: 15px;
+	padding: 0 8px;
+	border-right: 3px solid #006B92;
+}
+section.main .content-1{
+	position: relative;
+	width: 900px;
+	height: 400px;
+	float: left;
+	margin-right: 15px;
+	padding: 0 8px;
+	border-right: 3px solid #006B92;
+	top: -110px;
+}
+section.main .content-1 .vscroll{
+	height: 400px;
+	overflow: hidden;
+}
+section.main .scroll{
+	overflow: auto;
+}
+section p {
+	line-height: 120%;
+	margin-bottom: 5px;
+	color: #FFF7DF;
+}
+html.fontface section.main{
+	/*font-family: MyriadPro;
+	font-size: 100%;*/
+}
+footer{
+	position: fixed;
+	left: 690px;
+	bottom: 5px;
+	font-size: .8em;
+}
+html.fontface footer{
+	font-size: .8em;
+}
+footer ul{
+	list-style-type: none;
+	overflow: hidden;
+	padding: 5px;
+	color: white;
+}
+footer ul li{
+	float: left;
+	margin: 0 0 0 5px;
+	border-right: 1px solid #fff;
+	padding: 0 5px 0 0;
+}
+footer ul li:after {
+    content:'';
+    content:none;
+}
+footer ul li:last-child{
+	border-right: none;
+}
+footer section{
+	float: right;
+}
+/************************ FAQs **********************/
+div.faqEntry {
+    clear: left;
+    margin-bottom: 0;
+    min-height: 0;
+}
+div.faqEntry .question:before{
+	content: 'Q. ';
+}
+div.faqEntry .question {
+    margin-bottom: 5px;	
+}
+div.faqEntry div.collapse {
+    height: 0;
+    margin-bottom: 16px;
+    overflow: hidden;
+    width: 0;
+}
+div.faqEntry div.collapse div.answer {
+    display: none;
+}
+div.faqEntry div.expand, div.faqEntry div.collapse {
+    display: block;
+}
+div.answer {
+    margin-top: 1px;
+    min-height: 0;
+}
+div.faqEntry div.expand div.answer {
+    font-size: 13px;
+    line-height: 20px;
+}
+div.faqEntry div.answer :before{
+	content: 'A. ';
+}
+/***************** Projects ******************/
+#project .filter {
+    font-size: 14px;
+    position: absolute;
+    right: 36px;
+	top: 30px;
+}
+#project .filter ul {
+    background-color: #CECFD5;
+    background-position: 0 -472px;
+    background-repeat: repeat-x;
+    color: #3C3E45;
+    display: block;
+    height: 37px;
+    line-height: 36px;
+    margin: 0 19px;
+    overflow: hidden;
+}
+.ns-lava_thumb, #project .filter .thumb {
+    background-position: 100% -404px;
+    left: 0;
+    margin: 3px 15px 0 3px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+#project .thumbnails img {
+    height: 145px;
+    width: 250px;
+}
+.ns-lava_item:first-child, #project .filter li:first-child {
+    margin: 0;
+}
+.ns-lava_item, #project .filter li {
+    color: #3C3E45;
+    float: left;
+    margin: 0 0 0 30px;
+    position: relative;
+    z-index: 2;
+}
+
+#project .thumbnails{
+	margin-top: 50px;
+}
+#project .thumbnails:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+#project .thumbnails li {
+    display: inline;
+    float: left;
+    margin: 0 0 15px 30px;
+    width: 260px;
+}
+#project .thumbnail-list .image, #project .thumbnails .image {
+    border: 5px solid;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.28);
+    color: white;
+    display: inline-block;
+    overflow: hidden;
+}
+#project .thumbnail-list .image:hover, #project .thumbnails .image:hover, .ns-rollover.active, .active.ns-rollover-thin, #project .thumbnail-list .active.image, #project .thumbnails .active.image {
+    color: #FF9900;
+}
+#project .thumbnails .title {
+    display: block;
+    margin: 15px 0 0;
+    text-align: center;
+}
+.borderradius.boxshadow.cssgradients #project .filter ul {
+    background: linear-gradient(rgba(0, 0, 0, 0.08), transparent) repeat scroll 0 0 #D6D7DD;
+    border-radius: 18px 18px 18px 18px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28) inset, 0 1px white;
+    height: 36px;
+    line-height: 36px;
+    margin: 0 0 1px;
+    padding: 0 19px;
+}
+.borderradius.boxshadow.cssgradients .ns-lava_thumb, .borderradius.boxshadow.cssgradients #project .filter .thumb, #project .filter .borderradius.boxshadow.cssgradients .thumb {
+    background: none repeat scroll 0 0 transparent;
+}
+.ns-lava_thumb, #project .filter .thumb {
+    background-position: 100% -404px;
+    left: 0;
+    margin: 3px 15px 0 3px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+.borderradius.boxshadow.cssgradients .ns-lava_thumb_left, .borderradius.boxshadow.cssgradients #project .filter .thumb b, #project .filter .thumb .borderradius.boxshadow.cssgradients b {
+    display: none;
+}
+.ns-lava_thumb_left, #project .filter .thumb b {
+    background-position: 0 -342px;
+    height: 31px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 15px;
+}
+.borderradius.boxshadow.cssgradients .ns-lava_thumb_middle, .borderradius.boxshadow.cssgradients #project .filter .thumb span, #project .filter .thumb .borderradius.boxshadow.cssgradients span {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.13)) repeat scroll 0 0 #EEF3F6;
+    border-radius: 18px 18px 18px 18px;
+    box-shadow: 0 1px white inset, 0 1px rgba(0, 0, 0, 0.25);
+    height: 30px;
+    line-height: 30px;
+    margin: 0 0 1px;
+    padding: 0 15px;
+}
+.ns-lava_thumb_middle, #project .filter .thumb span {
+    background-color: #E8EAF0;
+    background-position: 0 -373px;
+    background-repeat: repeat-x;
+    display: block;
+    height: 31px;
+    line-height: 30px;
+    margin: 0 15px;
+}
+/******* contact-form ********/
+.contact-form{
+	clear: both;
+	font-size: 1.1em;
+	width: 412px;
+	padding-right: 30px;
+}
+.contact-form .required{
+	color: #006B92;
+}
+.contact-form .single-line, .contact-form .multi-line{
+	clear: both;
+	margin-bottom: 15px;
+}
+.contact-form label{
+	width: 100px;
+	display: inline-block;
+	vertical-align: top;
+}
+.contact-form input[type="text"], .contact-form input[type="email"]{
+	border: 1px solid #ccc;
+	padding: 2px 3px;
+	font-size: 1em;
+	width: 400px;
+}
+.contact-form textarea{
+	width: 400px;
+}
+.contact-form .buttons {
+    float: right;
+}
+.contact-form .buttons button {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    cursor: pointer;
+    overflow: visible;
+    padding: 0;
+}
+.contact-form .buttons button > span {
+    font-size: 16px;
+    width: 150px;
+}
+.contact-form .buttons button > span span {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.1)) repeat scroll 0 0 #EEF3F6;
+    border: 1px solid #C5C7CC;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28), 0 1px white inset;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 0 3px;
+    padding: 0 22px;
+    transition: background-color 300ms ease 0s;
+	 color: #3C3E45;
+    display: block;
+}
+.contact-form .indicators {
+    float: left;
+    margin: 15px 0 0;
+}
+.contact-form .indicators span {
+    border: 1px solid;
+    border-radius: 3px 3px 3px 3px;
+    display: none;
+    padding: 5px 10px;
+}
+.contact-form .indicators .success {
+    background: none repeat scroll 0 0 #E7FFDA;
+    color: #69AA46;
+}
+.contact-form .indicators .progress {
+    background: none repeat scroll 0 0 #FFFBDA;
+    color: #AAA046;
+}
+.contact-form .indicators .error {
+    background: none repeat scroll 0 0 #FFE0DA;
+    color: #AA5546;
+}
