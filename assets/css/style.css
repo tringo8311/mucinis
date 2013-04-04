@@ -28,12 +28,10 @@ time, mark, audio, video {
 }
 
 body {
-    line-height:1;
-	font-family: verdana, arial, sans-serif;
+	background: #00ABBC;
+	font: 16px/1em Helvetica,Arial,sans-serif;
 	padding: 0;
-	background: #00ABBC url(../images/bg_body.jpg) no-repeat top left;
-	color: white;
-	width: 450em;
+	color: white;	
 }
 
 article,aside,details,figcaption,figure,
@@ -62,6 +60,7 @@ a {
     background:transparent;
 	color: white;
 	text-decoration: none;
+	 outline: 0;
 }
 
 /* change colours to suit your needs */
@@ -113,12 +112,13 @@ h1{
 h2{
 	font-size: 1.8em;
 	line-height: 150%;
+	text-transform: uppercase;
 }
 .fontface h1, .fontface h2{
 	font-family: TrajanPro;
 }
-.logo{
-	position: fixed;
+header.main{
+	position: absolute;
 	left: 80px;
 	bottom: 8px;
 	color: #006B91;
@@ -129,42 +129,70 @@ h2{
 }
 .logo a, .logo a:visited{
 	color: #006B92;
-	font-size: 2.3em;
+	font-size: 2.1em;
 	text-decoration: none;
 	text-shadow: #aaa 3px 3px 3px;
 }
 .logo .slogan{
 	color: #C7C3D4;
-	font-size: 1.5em;
+	font-size: 1.4em;
 	border-top: 1px solid #C7C3D4;
 	padding: 3px 0;
 	margin-top: 3px;
 }
 .fontface .logo a{
-	font: 2.3em TrajanPro;
+	font: 2.1em TrajanPro;
 	text-shadow: none;
 }
 .fontface .logo .slogan {
-	font: 1.4em TrajanPro;
+	font: 1.3em TrajanPro;
 	text-shadow: none;
 }
 #wrap{
 	 /*background: transparent url(../images/bg_body.jpg) no-repeat top left;*/
 	overflow: hidden;
 }
+.arrow {
+    background: none repeat scroll 0 0 transparent;
+    border: 2px solid white;
+    border-radius: 1000px 1000px 1000px 1000px;
+    cursor: pointer;
+    height: 150px;
+    margin-left: -75px;
+    margin-right: -75px;
+    margin-top: -75px;
+    position: fixed;
+    top: 50%;
+    width: 150px;
+    z-index: 9001;
+}
+.arrow.prev {
+    background: url("../images/arrow_left.png") no-repeat scroll 75% center transparent;
+    left: 0;
+}
+.arrow.next {
+    background: url("../images/arrow_right.png") no-repeat scroll 25% center transparent;
+    right: 0;
+}
+.arrow .altColor {
+    border: 2px solid #DDDC00;
+    border-radius: 1000px 1000px 1000px 1000px;
+    height: 146px;
+    width: 146px;
+}
 header.main{
-	float: left;	
 }
 nav.main{
 	position: relative;
-	width: 1070px;
+	width: 870px;
 	height: 580px;
 	overflow: hidden;
+	float: left;
 }
 nav.main ul{
 	position: relative;	
-	left: 90px;
-	top: -27px;
+	left: 81px;
+	top: -10px;
 	color: white;
 	font-weight: normal;
 }
@@ -172,8 +200,8 @@ nav.main ul li{
 	float: left;
 	margin: 1px;	
 	text-align: center;
-	width: 147px;
-	height: 147px;
+	width: 116px;
+	height: 116px;
 	margin-left: 62px;
 	margin-bottom: 62px;
 	position: absolute;
@@ -186,51 +214,52 @@ nav.main ul li.hex-1 a, nav.main ul li.hex-2 a, nav.main ul li.hex-4 a, nav.main
 	background-color: #615489;
 }
 nav.main ul li.hex-2{
-	left: 106px;
-	top: 106px;
+	left: 83px;
+	top: 83px;
 }
 nav.main ul li.hex-3{
-	left: 212px;
-	top: 212px;
+	left: 167px;
+	top: 167px;
 }
 nav.main ul li.hex-3 a{
 	background-color: #62335D;
 }
 nav.main ul li.hex-4{
-	left: 318px;
-	top: 318px;
+	left: 249px;
+	top: 249px;
 }
 nav.main ul li.hex-5{
-	left: 424px;
-	top: 424px;
+	left: 335px;
+	top: 334px;
 }
 nav.main ul li.hex-5 a, nav.main ul li.hex-6 a, nav.main ul li.hex-8 a{
 	background-color:  #787BA8;
 }
 nav.main ul li.hex-6{
-	left: 212px;
+	left: 167px;
 	top: 0px;
 }
 nav.main ul li.hex-7{
-	left: 318px;
-	top: 106px;	
+	left: 250px;
+	top: 83px;	
 }
 nav.main ul li.hex-8{
-	left: 424px;
-	top: 212px;
+	left: 333px;
+	top: 166px;
 }
 nav.main ul li.hex-9{
-	left: 530px;
-	top: 318px;
+	left: 416px;
+	top: 249px;
 }
 nav.main a{
 	background-color: #00ABBC;
 	vertical-align: middle;
-	width: 148px;
-	height: 148px;
+	width: 116px;
+	height: 116px;
 	display: block;
-	line-height: 9em;
+	line-height: 8em;
 	font-size: 90%;
+	overflow: hidden;
 }
 nav.main a:hover, nav.main ul li.hex-1 a:hover, nav.main ul li.hex-2 a:hover, nav.main ul li.hex-3 a:hover, nav.main ul li.hex-4 a:hover, nav.main ul li.hex-7 a:hover, nav.main ul li.hex-8 a:hover, nav.main ul li.hex-9 a:hover{
 	background-color: #ff9900;
@@ -258,36 +287,80 @@ a.plus{
 	text-align: left;
 	float: left;
 }
-section.main{
-	top: 110px;
-	left: 10px;
-	float: left;
-	position: relative;
-	padding: 10px;
-	font-size: 90%;
+.scroll-section-container{
+	height: 580px;
+    width: 1300px;
+	position:relative;
+	overflow:hidden;
+	clear:both;
+	background-color: transparent;
 }
-section.main .content{
-	text-align: right;
+.scroll-section-container .items {
+	width:20000em;
+	position:absolute;
+	clear:both;
+	margin:0;
+	padding:0;
+	border:0;
+}
+.scroll-section-container .items .item {
+	float:left;
+	display:block;
+	width:1300px;
+}
+.scroll-section-container h2{
+	padding: 0px 0px;
+	margin-bottom: 10px;
+}
+.scroll-section-container .section-inner{
+	width: 880px;
+	margin: 0 auto;
+	padding: 20px 100px;
 	position: relative;
-	width: 400px;
+	overflow: hidden;
+}
+.section-inner .scroll{
+	height: 420px;
+}
+#landing{
+	background: #00ABBC url(../images/bg_body.jpg) no-repeat top left;
+}
+#introduction{
+	text-align: right;
+	margin: 50px 20px 20px 0;
+	position: relative;
+	width: 370px;
 	height: 320px;
 	float: left;
 	margin-right: 15px;
 	padding: 0 8px;
-	border-right: 3px solid #006B92;
 }
-section.main .content-1{
-	position: relative;
-	width: 900px;
-	height: 400px;
-	float: left;
-	margin-right: 15px;
-	padding: 0 8px;
-	border-right: 3px solid #006B92;
-	top: -110px;
+#about-us .section-inner{
+	background-color: #64CC8D;
 }
-section.main .content-1 .vscroll{
-	height: 400px;
+#service .section-inner{
+	background-color: #64CC8D;
+}
+#project .section-inner{
+	background: #B8AE4D;
+	/*background: url("../images/pattern.png") repeat fixed 0 0 #E7F9FC;*/
+}
+#faqs{
+}
+#faqs .section-inner{
+	background: url("../images/bg_faqs.png") no-repeat scroll left bottom #7A5CA1;
+	/*border: 2px solid #7A5CA1;*/
+}
+#contact-us .section-inner{
+	background: url("../images/bg_contact.png") no-repeat scroll left bottom #8AB84B;;
+	text-align: left;	
+}
+#about-us, #service, #project, #faqs, #contact-us{
+	margin: 10px;	
+	overflow: hidden;
+}
+section.main .vscroll{
+	height: 350px;
 	overflow: hidden;
 }
 section.main .scroll{
@@ -302,36 +375,102 @@ html.fontface section.main{
 	/*font-family: MyriadPro;
 	font-size: 100%;*/
 }
-footer{
-	position: fixed;
-	left: 690px;
-	bottom: 5px;
+footer.main{
+	position: absolute;
+	left: 550px;
+	bottom: 10px;
 	font-size: .8em;
 }
-html.fontface footer{
+html.fontface footer.main{
 	font-size: .8em;
 }
-footer ul{
+footer.main{
+	width: 730px;
+}
+footer.main ul{
 	list-style-type: none;
 	overflow: hidden;
 	padding: 5px;
 	color: white;
 }
-footer ul li{
+footer.main ul li{
 	float: left;
 	margin: 0 0 0 5px;
-	border-right: 1px solid #fff;
 	padding: 0 5px 0 0;
+	white-space: nowrap
 }
-footer ul li:after {
+footer.main ul li:after {
     content:'';
     content:none;
 }
-footer ul li:last-child{
+footer.main ul li:last-child{
 	border-right: none;
 }
-footer section{
+footer.main .copyright{
+	float: left;
+}
+footer.main .copyright li{
+	padding: 5px 0;
+}
+footer.main .social{
 	float: right;
+}
+footer.main .social i{
+	position: relative;
+}
+footer.main .social li a,footer.main .social li a:active,footer.main .social li a:visited{
+	text-indent: -999em;
+	background: transparent url(../images/icon_social.png) no-repeat top left;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+}
+footer.main .social li a:hover{
+	background-position: 0 -30px;	
+}
+footer.main .social li a.twitter{
+	background-position: -30px 0;
+}
+footer.main .social li a.twitter:hover{
+	background-position: -30px -30px;
+}
+footer.main .social li a.linkedin{
+	background-position: -60px 0px;
+}
+footer.main .social li a.linkedin:hover{
+	background-position: -60px -30px;
+}
+footer.main .social li a.facebook{
+	background-position: -90px 0px;
+}
+footer.main .social li a.facebook:hover{
+	background-position: -90px -30px;
+}
+footer.main .social li a.googleplus{
+	background-position: -120px 0;
+}
+footer.main .social li a.googleplus:hover{
+	background-position: -120px -30px;
+}
+/************************************************/
+#about-us .thumbnails{
+	margin-top: 50px;
+}
+#about-us .thumbnails:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+#about-us .thumbnails li {
+    display: inline;
+    float: left;
+    margin: 0 15px 20px 15px;
+    width: 260px;
+	position: relative;
+}
+#about-us .thumbnails img {
+    height: 145px;
+    width: 250px;
 }
 /************************ FAQs **********************/
 div.faqEntry {
@@ -342,8 +481,13 @@ div.faqEntry {
 div.faqEntry .question:before{
 	content: 'Q. ';
 }
-div.faqEntry .question {
-    margin-bottom: 5px;	
+div.faqEntry .question  a{
+    margin-bottom: 5px;
+	background: transparent url(../images/icon_down_up.png) no-repeat top right;
+	padding-right: 40px;
+}
+div.faqEntry .question a:hover, div.faqEntry .question a.link_expand:hover{
+	background-position: bottom right;
 }
 div.faqEntry div.collapse {
     height: 0;
@@ -357,7 +501,7 @@ div.faqEntry div.collapse div.answer {
 div.faqEntry div.expand, div.faqEntry div.collapse {
     display: block;
 }
-div.answer {
+div.faqEntry div.answer {
     margin-top: 1px;
     min-height: 0;
 }
@@ -372,11 +516,11 @@ div.faqEntry div.answer :before{
 #project .filter {
     font-size: 14px;
     position: absolute;
-    right: 36px;
+    left: 30px;
 	top: 30px;
 }
 #project .filter ul {
-    background-color: #CECFD5;
+    /*background-color: #CECFD5;*/
     background-position: 0 -472px;
     background-repeat: repeat-x;
     color: #3C3E45;
@@ -394,10 +538,7 @@ div.faqEntry div.answer :before{
     top: 0;
     z-index: 1;
 }
-#project .thumbnails img {
-    height: 145px;
-    width: 250px;
-}
+
 .ns-lava_item:first-child, #project .filter li:first-child {
     margin: 0;
 }
@@ -417,15 +558,40 @@ div.faqEntry div.answer :before{
     content: "";
     display: table;
 }
+#project .thumbnails img {
+    height: 145px;
+    width: 250px;
+}
 #project .thumbnails li {
     display: inline;
     float: left;
-    margin: 0 0 15px 30px;
+    margin: 0 15px 20px 15px;
     width: 260px;
+	position: relative;
+}
+/* tooltip styling. by default the element to be styled is .tooltip  */
+#project .thumbnails .tooltip {
+	position: absolute;
+	top: 65px;
+	left: 0;
+	display:none;
+	border-left: 4px solid #000;
+	border-right: 4px solid #000;
+	border-bottom: 4px solid #000;
+    height: 120px;
+    padding: 5px;
+    width: 242px;
+	background: #fff;
+}
+#project .thumbnails .tooltip p{
+    color: #ccc;
+}
+#project .thumbnails li:hover .tooltip{
+	display: inline-block;
 }
 #project .thumbnail-list .image, #project .thumbnails .image {
     border: 5px solid;
-    border-radius: 5px 5px 5px 5px;
+    /*border-radius: 5px 5px 5px 5px;*/
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.28);
     color: white;
     display: inline-block;
@@ -440,7 +606,7 @@ div.faqEntry div.answer :before{
     text-align: center;
 }
 .borderradius.boxshadow.cssgradients #project .filter ul {
-    background: linear-gradient(rgba(0, 0, 0, 0.08), transparent) repeat scroll 0 0 #D6D7DD;
+    /*background: linear-gradient(rgba(0, 0, 0, 0.08), transparent) repeat scroll 0 0 #D6D7DD;*/
     border-radius: 18px 18px 18px 18px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28) inset, 0 1px white;
     height: 36px;
@@ -489,35 +655,50 @@ div.faqEntry div.answer :before{
     margin: 0 15px;
 }
 /******* contact-form ********/
+#contact-us .form{
+	overflow: hidden;
+}
 .contact-form{
 	clear: both;
-	font-size: 1.1em;
-	width: 412px;
+	font-size: 1em;
+	width: 420px;
 	padding-right: 30px;
+	float: left;
 }
 .contact-form .required{
 	color: #006B92;
 }
 .contact-form .single-line, .contact-form .multi-line{
 	clear: both;
-	margin-bottom: 15px;
+	margin-bottom: 15px;	
 }
 .contact-form label{
 	width: 100px;
 	display: inline-block;
 	vertical-align: top;
+	float: left;
+	text-align: right;
+	padding: 2px 5px;
 }
 .contact-form input[type="text"], .contact-form input[type="email"]{
 	border: 1px solid #ccc;
 	padding: 2px 3px;
 	font-size: 1em;
-	width: 400px;
+	width: 300px;
+	background: none repeat scroll 0 0 #fff;
+	color: white;
 }
 .contact-form textarea{
-	width: 400px;
+	width: 303px;
+	background: none repeat scroll 0 0 #fff;
+	color: white;
+	border: 1px solid #ccc;
+	float: left;
+	clear: right;
 }
 .contact-form .buttons {
     float: right;
+	clear: both;
 }
 .contact-form .buttons button {
     background: none repeat scroll 0 0 transparent;
@@ -532,15 +713,14 @@ div.faqEntry div.answer :before{
 }
 .contact-form .buttons button > span span {
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.1)) repeat scroll 0 0 #EEF3F6;
-    border: 1px solid #C5C7CC;
-    border-radius: 20px 20px 20px 20px;
+   	border: 1px solid #ccc;
+    border-radius: 2px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28), 0 1px white inset;
     height: 40px;
     line-height: 40px;
     margin: 0 0 3px;
-    padding: 0 22px;
-    transition: background-color 300ms ease 0s;
-	 color: #3C3E45;
+    padding: 0 16px;    
+	color: #3C3E45;
     display: block;
 }
 .contact-form .indicators {
@@ -565,3 +745,133 @@ div.faqEntry div.answer :before{
     background: none repeat scroll 0 0 #FFE0DA;
     color: #AA5546;
 }
+#contact-us .info {
+    float: right;
+}
+#contact-us .info dl {
+    text-align: right;
+    width: 220px;
+}
+#contact-us .info dt {
+    display: none;
+}
+#contact-us .info dd {
+    margin-bottom: 10px;
+}
+#contact-us .info dd.phone {
+    font-size: 14px;
+}
+#contact-us .map {
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 1px 4px #B1B3B8, 0 1px white inset;
+    clear: both;
+    float: right;
+    padding: 7px;
+    width: 400px;
+}
+.no-boxshadow #contact-us .map {
+    background: none repeat scroll 0 0 #EFF1F7;
+    border: 1px solid #D0D2D7;
+}
+#contact-us .map figure {
+    height: 253px;
+}
+/*********************** jQuery Tooltip ******************/
+/* root element for pages */
+#main {
+  position:relative;
+  overflow:hidden;
+  height: 450px;
+  }
+  #pages {
+  position:absolute;
+  height:20000em;
+  }
+  .navi {
+    height: 20px;
+    margin-left: 328px;
+    width: 200px;
+}
+.navi a {
+    background: url("http://jquerytools.org/media/img/scrollable/arrow/navigator.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: left;
+    font-size: 1px;
+    height: 8px;
+    margin: 3px;
+    width: 8px;
+}
+
+  /* single page */
+  #project .page {
+  padding:10px;
+  height: 450px;
+  background:#222 url(/media/img/gradient/h600.png) 0 0 repeat-x;
+  width:520px;
+  }
+
+  /* root element for horizontal scrollables */
+  #project .scrollable {
+  position:relative;
+  overflow:hidden;
+  width: 510px;
+  height: 450px;
+  }
+
+  /* root element for scrollable items */
+  #project  .scrollable .items {
+  width:20000em;
+  position:absolute;
+  clear:both;
+  }
+
+  /* single scrollable item */
+  #project  .item {
+  float:left;
+  cursor:pointer;
+  width:500px;
+  height:450px;
+  padding:10px;
+  }
+
+  /* main navigator */
+  #main_navi {
+  float:left;
+  padding:0px !important;
+  margin:0px !important;
+  }
+
+  #main_navi li {
+  background-color:#333;
+  border-top:1px solid #666;
+  clear:both;
+  color:#FFFFFF;
+  font-size:12px;
+  height:75px;
+  list-style-type:none;
+  padding:10px;
+  width:190px;
+  cursor:pointer;
+  }
+
+  #main_navi li:hover {
+  background-color:#444;
+  }
+
+  #main_navi li.active {
+  background-color:#555;
+  }
+
+  #main_navi img {
+  float:left;
+  margin-right:10px;
+  }
+
+  #main_navi strong {
+  display:block;
+  }
+
+  #main div.navi {
+  margin-left:250px;
+  cursor:pointer;
+  }

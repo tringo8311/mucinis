@@ -8,9 +8,9 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
 	<title>Mucinis</title>
 	<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-	<link rel="stylesheet" href="assets/css/font.css" media="screen" />
-	<link rel="stylesheet" href="assets/css/style.css" media="screen" />
-	<link rel="stylesheet" href="assets/css/jScrollPane.css" media="screen" />
+	<link rel="stylesheet" href="./assets/css/font.css" media="screen" />
+	<link rel="stylesheet" href="./assets/css/style.css" media="screen" />
+	<link rel="stylesheet" href="./assets/css/jScrollPane.css" media="screen" />
 	<!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -30,313 +30,461 @@
 			}, {
 				load: "./assets/js/backbone-min.js",
 				callback: function(b, c, d){
-					a.Backbone || yepnope("assets/js/backbone-min.js")
+					a.Backbone || yepnope("./assets/js/backbone-min.js")
 				}
-			}, "./assets/js/app.js", "./assets/js/jScrollPane.js"])
+			}, "./assets/js/jquery.tools.min.js", "./assets/js/jquery.nicescroll.min.js", "./assets/js/app.js"])
 		})(window)
 	</script>
 </head>
 <body>
-	<div id="wrap">
+<div id="wrap">
+	<div class="arrow prev">
+		<div class="altColor"></div>
+	</div>
+	<div class="arrow next">
+		<div class="altColor"></div>
+	</div>
 	<header class="main">
-		<a id="homepage" name="homepage"></a>
 		<div class="logo">
 			<a href="#homepage" class="scroll-to" >Mucinis</a>
 			<p class="slogan">The plat world</p>
 		</div>
-		<nav class="main">
-			<ul>
-				<li class="hex-1">
-					<a href="#home" class="scroll-to" title="Home">
-						<span>Home</span>
-					</a>
-				</li>				
-				<li class="hex-2">
-					<a href="#aboutus" class="scroll-to" title="About Us">
-						<span>About Us</span>
-					</a>
-				</li>
-				<li class="hex-3">
-					<a href="#service" class="scroll-to" title="Service">
-						<span>Service</span>
-					</a>
-				</li>
-				<li class="hex-4">
-					<a href="#project" class="scroll-to" title="Project">
-						<span>Project</span>
-					</a>
-				</li>
-				<li class="hex-5"><a href="#" title="Space"></a></li>
-				<li class="hex-6"><a href="#" title="Space"></a></li>
-				<li class="hex-7">
-					<a href="/blog" title="Blog">
-						<span>Blog</span>
-					</a>
-				</li>
-				<li class="hex-8">
-					<a href="#faqs" class="scroll-to" title="FAQs">
-						<span>FAQs</span>
-					</a>
-				</li>
-				<li class="hex-9">
-					<a href="#contactus" class="scroll-to" title="Contact Us">
-						<span>Contact Us</span>
-					</a>
-				</li>
-			</ul>
-		</nav>		
 	</header>
-	<section class="main">		
-		<article class="content">
-			<a id="home" class="plus" name="home">+</a>
-			<h1>Mucinis Group</h1>
-			<div class="scroll">
-				<p>HTML5 is the latest hot favorite web markup language for the web developers and it is another stepping stone to make the web experience more enjoyable and beautiful. HTML5 templates are getting very popular these days because all professional HTML5 templates are compatible to all browsers with its functionality and features, and with the release of HTML5 / CSS3 it has become even more popular among designers because of the additional and great features.</p>
-				<p>In any business, it’s people who make the difference. Whether you’re developing a new prototype in Germany, the latest toy in Japan or a breakthrough new material in Brazil, it’s the expertise, attitude, skills, and knowledge of the people in your company that make it a success. At FedEx, we know that it’s our people who make our global network work. Whether it's the courier delivering your package, the customer service agent you speak to or the thousands of experts working in the background, you can count on the FedEx team across the globe to work together to get your shipment, and all the information that travels with it, where it needs to go..</p>
+	<div class="scroll-section-container">
+		<div class="items">	
+			<div class="item" id="landing">
+				<nav class="main">
+					<ul>
+						<li class="hex-1">
+							<a href="/#/home" class="scroll-to" title="Home">
+								<span>Home</span>
+							</a>
+						</li>				
+						<li class="hex-2">
+							<a href="/#/about-us" class="scroll-to" title="About Us">
+								<span>About Us</span>
+							</a>
+						</li>
+						<li class="hex-3">
+							<a href="#service" class="scroll-to" title="Service">
+								<span>Service</span>
+							</a>
+						</li>
+						<li class="hex-4">
+							<a href="#project" class="scroll-to" title="Project">
+								<span>Project</span>
+							</a>
+						</li>
+						<li class="hex-5"><a href="#" title="Space"></a></li>
+						<li class="hex-6"><a href="#" title="Space"></a></li>
+						<li class="hex-7">
+							<a href="/blog" title="Blog">
+								<span>Blog</span>
+							</a>
+						</li>
+						<li class="hex-8">
+							<a href="#/faqs" class="scroll-to" title="FAQs">
+								<span>FAQs</span>
+							</a>
+						</li>
+						<li class="hex-9">
+							<a href="#/contact-us" class="scroll-to" title="Contact Us">
+								<span>Contact Us</span>
+							</a>
+						</li>
+					</ul>
+				</nav>		
+				<article id="introduction" class="content">			
+					<a id="home" name="home">+</a>
+					<h2>Mucinis Group</h2>
+					<div class="">
+						<p>HTML5 is the latest hot favorite web markup language for the web developers and it is another stepping stone to make the web experience more enjoyable and beautiful. HTML5 templates are getting very popular these days because all professional HTML5 templates are compatible to all browsers with its functionality and features, and with the release of HTML5 / CSS3 it has become even more popular among designers because of the additional and great features.</p>
+						<p>In any business, it’s people who make the difference. Whether you’re developing a new prototype in Germany, the latest toy in Japan or a breakthrough new material in Brazil, it’s the expertise, attitude, skills, and knowledge of the people in your company that make it a success. At FedEx, we know that it’s our people who make our global network work. Whether it's the courier delivering your package, the customer service agent you speak to or the thousands of experts working in the background, you can count on the FedEx team across the globe to work together to get your shipment, and all the information that travels with it, where it needs to go..</p>
+					</div>
+				</article>
 			</div>
-		</article>
-		<article class="content-1">
-			<a id="aboutus" class="plus" name="aboutus">+</a>
-			<h1>About Us</h1>
-			<div class="scroll">
-				<p>HTML5 is the latest hot favorite web markup language for the web developers and it is another stepping stone to make the web experience more enjoyable and beautiful. HTML5 templates are getting very popular these days because all professional HTML5 templates are compatible to all browsers with its functionality and features, and with the release of HTML5 / CSS3 it has become even more popular among designers because of the additional and great features.</p>
-				<p>In any business, it’s people who make the difference. Whether you’re developing a new prototype in Germany, the latest toy in Japan or a breakthrough new material in Brazil, it’s the expertise, attitude, skills, and knowledge of the people in your company that make it a success. At FedEx, we know that it’s our people who make our global network work. Whether it's the courier delivering your package, the customer service agent you speak to or the thousands of experts working in the background, you can count on the FedEx team across the globe to work together to get your shipment, and all the information that travels with it, where it needs to go..</p>
-			</div>
-		</article>
-		<article class="content-1">
-			<a id="service" class="plus" name="service">+</a>
-			<h1>Service</h1>
-			<div class="scroll">
-				<p>HTML5 is the latest hot favorite web markup language for the web developers and it is another stepping stone to make the web experience more enjoyable and beautiful. HTML5 templates are getting very popular these days because all professional HTML5 templates are compatible to all browsers with its functionality and features, and with the release of HTML5 / CSS3 it has become even more popular among designers because of the additional and great features.</p>
-				<p>In any business, it’s people who make the difference. Whether you’re developing a new prototype in Germany, the latest toy in Japan or a breakthrough new material in Brazil, it’s the expertise, attitude, skills, and knowledge of the people in your company that make it a success. At FedEx, we know that it’s our people who make our global network work. Whether it's the courier delivering your package, the customer service agent you speak to or the thousands of experts working in the background, you can count on the FedEx team across the globe to work together to get your shipment, and all the information that travels with it, where it needs to go..</p>
-			</div>
-		</article>
-		<article id="project" class="content-1">
-			<a class="plus" name="project">+</a>
-			<header class="overview-mode">
-				<div class="container">
-					<h2>Project</h2>
-					<nav class="proj-nav">
+			<div class="item">		
+			<article id="about-us">
+				<div class="section-inner">
+					<h2>About Us</h2>
+					<div class="scroll">
 						<ul class="thumbnails">
-							<li class="web">
+							<li class="website">
 								<figure class="thumbnail">
-									<a href="#/project/1" class="image"><img src="assets/images/thumb_academy.jpg"></a>
+									<a href="#/project/1" class="image"><img src="assets/images/thumb_academy.jpg" alt="123"></a>
 								</figure>
-								<figcaption class="title">Lorn</figcaption>
+								<figcaption class="title">Lorn</figcaption>										
 							</li>
-							<li class="print">
+							<li class="design-print">
 								<figure class="thumbnail">
-									<a href="#/project/2" class="image"><img src="assets/images/thumb_academy.jpg"></a>
-								</figure>
-								<figcaption class="title">Lorn</figcaption>
-							</li>
-							<li class="service">
-								<figure class="thumbnail">
-									<a href="#/project/3" class="image"><img src="assets/images/thumb_academy.jpg"></a>
+									<a href="#/project/2" class="image"><img src="assets/images/thumb_academy.jpg" alt="123"></a>
 								</figure>
 								<figcaption class="title">Lorn</figcaption>
 							</li>
 							<li class="service">
 								<figure class="thumbnail">
-									<a href="#/project/4" class="image"><img src="assets/images/thumb_academy.jpg"></a>
+									<a href="#/project/3" class="image"><img src="assets/images/thumb-1.jpg" alt="123"></a>
+								</figure>
+								<figcaption class="title">Lorn</figcaption>
+							</li>
+							<li class="service">
+								<figure class="thumbnail">
+									<a href="#/project/4" class="image"><img src="assets/images/thumb_academy.jpg" alt="123"></a>
+								</figure>
+								<figcaption class="title">Lorn</figcaption>
+							</li>
+							<li class="service">
+								<figure class="thumbnail">
+									<a href="#/project/4" class="image"><img src="assets/images/thumb-1.jpg" alt="123"></a>
+								</figure>
+								<figcaption class="title">Lorn</figcaption>
+							</li>
+							<li class="service">
+								<figure class="thumbnail">
+									<a href="#/project/4" class="image"><img src="assets/images/thumb-1.jpg" alt="123"></a>
+								</figure>
+								<figcaption class="title">Lorn</figcaption>
+							</li>
+							<li class="service">
+								<figure class="thumbnail">
+									<a href="#/project/4" class="image"><img src="assets/images/thumb_academy.jpg" alt="123"></a>
 								</figure>
 								<figcaption class="title">Lorn</figcaption>
 							</li>
 						</ul>
-					</nav>
+					</div>
 				</div>
-			</header>			
-		</article>
-		<article class="content-1 faqs">
-			<a id="faqs" class="plus" name="faqs">+</a>
-			<h1>FAQs</h1>
-			<div class="introduction">
-				<p class="para">Here are answers to some common questions about the 32-bit and 64-bit versions of <span class="notLocalizable">Windows</span>.</p>
+			</article>
 			</div>
-			<a href="#" class="link_expandAll">Show all</a>
-			<div class="vscroll">
-				<div class="faqEntry">
-					<h3 class="question">
-						<a class="link_collapse" href="#">How can I tell if my computer 1</a>
-					</h3>
-					<div class="collapse">
-						<div class="answer">
-							<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
-						</div>
+			<div class="item">
+			<article id="service">
+				<div class="section-inner">
+				<h2>Service</h2>
+					<div class="scroll">
+						<p>HTML5 is the latest hot favorite website markup language for the website developers and it is another stepping stone to make the website experience more enjoyable and beautiful. HTML5 templates are getting very popular these days because all professional HTML5 templates are compatible to all browsers with its functionality and features, and with the release of HTML5 / CSS3 it has become even more popular among designers because of the additional and great features.</p>
+						<p>In any business, it’s people who make the difference. Whether you’re developing a new prototype in Germany, the latest toy in Japan or a breakthrough new material in Brazil, it’s the expertise, attitude, skills, and knowledge of the people in your company that make it a success. At FedEx, we know that it’s our people who make our global network work. Whether it's the courier delivering your package, the customer service agent you speak to or the thousands of experts working in the background, you can count on the FedEx team across the globe to work together to get your shipment, and all the information that travels with it, where it needs to go..</p>
 					</div>
 				</div>
-				<div class="faqEntry">
-					<h3 class="question">
-						<a class="link_collapse" href="#">How can I tell if my computer 2</a>
-					</h3>
-					<div class="collapse">
-						<div class="answer">
-							<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
-						</div>
-					</div>
-				</div>
-				<div class="faqEntry">
-					<h3 class="question">
-						<a class="link_collapse" href="#">How can I tell if my computer 3</a>
-					</h3>
-					<div class="collapse">
-						<div class="answer">
-							<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
-						</div>
-					</div>
-				</div>
-				<div class="faqEntry">
-					<h3 class="question">
-						<a class="link_collapse" href="#">How can I tell if my computer 3</a>
-					</h3>
-					<div class="collapse">
-						<div class="answer">
-							<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
-						</div>
-					</div>
-				</div>
-				<div class="faqEntry">
-					<h3 class="question">
-						<a class="link_collapse" href="#">How can I tell if my computer 3</a>
-					</h3>
-					<div class="collapse">
-						<div class="answer">
-							<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
-						</div>
-					</div>
-				</div>
-				<div class="faqEntry">
-					<h3 class="question">
-						<a class="link_collapse" href="#">How can I tell if my computer 3</a>
-					</h3>
-					<div class="collapse">
-						<div class="answer">
-							<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
-						</div>
-					</div>
-				</div>
-				<div class="faqEntry">
-					<h3 class="question">
-						<a class="link_collapse" href="#">How can I tell if my computer 3</a>
-					</h3>
-					<div class="collapse">
-						<div class="answer">
-							<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
-						</div>
-					</div>
-				</div>
-				<div class="faqEntry">
-					<h3 class="question">
-						<a class="link_collapse" href="#">How can I tell if my computer 3</a>
-					</h3>
-					<div class="collapse">
-						<div class="answer">
-							<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
-						</div>
-					</div>
-				</div>
-				<div class="faqEntry">
-					<h3 class="question">
-						<a class="link_collapse" href="#">How can I tell if my computer 3</a>
-					</h3>
-					<div class="collapse">
-						<div class="answer">
-							<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
-						</div>
-					</div>
-				</div>
-				<div class="faqEntry">
-					<h3 class="question">
-						<a class="link_collapse" href="#">How can I tell if my computer 3</a>
-					</h3>
-					<div class="collapse">
-						<div class="answer">
-							<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
-						</div>
-					</div>
-				</div>
-				<div class="faqEntry">
-					<h3 class="question">
-						<a class="link_collapse" href="#">How can I tell if my computer 3</a>
-					</h3>
-					<div class="collapse">
-						<div class="answer">
-							<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
-						</div>
-					</div>
-				</div>
-				<div class="faqEntry">
-					<h3 class="question">
-						<a class="link_collapse" href="#">How can I tell if my computer 3</a>
-					</h3>
-					<div class="collapse">
-						<div class="answer">
-							<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
-						</div>
-					</div>
-				</div>
+			</article>
 			</div>
-		</article>
-		<article class="content-1">
-			<a id="contactus" class="plus" name="contactus">+</a>
-			<h2>Contact Us</h2>
-			<p class="para">If you are any question, please contact us!</p>
-			<div class="scroll">
-				<form class="contact-form" method="post" action="index.php/site/contact" id="contact-form">
-					<p class="single-line">
-						<label for="ContactForm_name">Name <span class="required">*</span></label>
-						<input type="text" id="ContactForm_name" name="ContactForm[name]" placeholder="Input Your Name" required="true">
-					</p>
-					<p class="single-line"><label for="ContactForm_email">Email <span class="required">*</span></label>
-						<input type="email" placeholder="Input Your Email" id="ContactForm_email" name="ContactForm[email]" required="required">                </p>
-					<p class="single-line">
-						<label for="ContactForm_subject">Subject <span class="required">*</span></label>
-						<input type="text" id="ContactForm_subject" name="ContactForm[subject]" placeholder="Input Subject" required="true">                	
-					</p>
-					<p class="multi-line">
-						<label for="ContactForm_body">Content <span class="required">*</span></label>
-						<textarea id="ContactForm_body" name="ContactForm[body]" required="true" cols="50" rows="6"></textarea>                </p>
-					<div class="buttons">
-						<button type="submit">
-							<span><span>Send</span></span>
-					</button>
-					</div>							
-					<div class="indicators">
-						<span class="progress">Sending message...</span>
-						<span class="success">Message sent successfully</span>
-						<span class="error">Error sending message</span>
-					</div>
-				</form>
+			<div class="item">
+			<article id="project">
+				<div class="section-inner">
+						<div class="container">
+							<h2>Project</h2>
+							<ul id="main_navi">
+							  <li class="active">
+								<img src="http://farm4.static.flickr.com/3278/2691545308_e7e817afb0_s.jpg"/>
+								<strong>Seagram Building</strong>
+								New York City, United States
+							  </li>
+							  <li>
+								<img src="http://farm1.static.flickr.com/3624/3323893148_8318838fbd_s.jpg"/>
+								<strong>Barcelona Pavilion</strong>
+								Barcelona, Spain
+							  </li>
+							  <li>
+								<img src="http://farm1.static.flickr.com/40/122343298_22333fb8e3_s.jpg" />
+								<strong>New National Gallery</strong>
+								Berlin, Germany
+							  </li>
+							</ul>
+							<!-- root element for pages -->
+							<div id="main">
+							<div id="pages">
+								<!-- page #1 -->
+								<div class="page">
+								  <!-- sub navigator #1 -->
+								  <div class="navi"></div>
+								  <!-- inner scrollable #1 -->
+								  <div class="scrollable">
+									<!-- root element for scrollable items -->
+									<div class="items">
+									  <!-- items  -->
+									  <div class="item">
+										<img src="http://farm1.static.flickr.com/114/299183878_4feac12b04.jpg" />
+									  </div>
+									  <div class="item">
+										<img src="http://farm1.static.flickr.com/200/507751258_5f13e3d802.jpg" />
+									  </div>
+									  <div class="item">
+										<img src="http://farm1.static.flickr.com/30/37446217_14bc95631a.jpg" />
+									  </div>
+										</div>
+									</div>
+								</div>
+
+								<!-- page #2 -->
+								<div class="page">
+								  <div class="navi"></div>
+								  <!-- inner scrollable #2 -->
+								  <div class="scrollable">
+									<!-- root element for scrollable items -->
+									<div class="items">
+									  <!-- items on the second page -->
+									  <div class="item">
+										<img src="http://farm1.static.flickr.com/143/321464099_a7cfcb95cf.jpg" />
+									  </div>
+									  <div class="item">
+										<img src="http://farm1.static.flickr.com/164/399223606_b875ddf797.jpg" />
+									  </div>
+									  <div class="item">
+										<img src="http://farm4.static.flickr.com/3651/3445879840_7ca4b491e9.jpg" />
+									  </div>
+									</div>
+								  </div>
+								</div>
+								<!-- page #3 -->
+								<div class="page">
+								  <div class="navi"></div>
+								  <!-- inner scrollable #3 -->
+								  <div class="scrollable">
+									<!-- root element for scrollable items -->
+									<div class="items">
+									  <!-- items on the first page -->
+									  <div class="item">
+										<img src="http://farm4.static.flickr.com/3155/2636513939_cd75b704ec.jpg" />
+									  </div>
+									  <div class="item">
+										<img src="http://farm1.static.flickr.com/40/122343298_22333fb8e3.jpg" />
+									  </div>
+									  <div class="item">
+										<img src="http://farm4.static.flickr.com/3105/2618870872_cf22d3cdb1.jpg" />
+									  </div>
+									</div>
+								  </div>
+								</div>
+							</div>
+						</div>
+				</div>
+			</article>
 			</div>
-		</article>
-	</section>
-	<footer>
-		<ul>
-			<li>&copy; 2013 Mucinis. All right reserved</li>
-			<li>Term &amp; Condition</li>
-			<li>Privacy</li>
-		</ul>
-		<section>
+			<div class="item">
+			<article id="faqs">
+				<div class="section-inner">
+					<h2>FAQs</h2>
+					<div class="introduction">
+						<p class="para">Here are answers to some common questions about the 32-bit and 64-bit versions of <span class="notLocalizable">Windows</span>.</p>
+					</div>
+					<div style="padding: 10px 0">
+						<a href="#" class="link_expandAll">Show all</a>
+					</div>
+					<div class="vscroll">
+						<div class="faqEntry">
+							<h3 class="question">
+								<a class="link_collapse" href="#">How can I tell if my computer 1</a>
+							</h3>
+							<div class="collapse">
+								<div class="answer">
+									<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
+								</div>
+							</div>
+						</div>
+						<div class="faqEntry">
+							<h3 class="question">
+								<a class="link_collapse" href="#">How can I tell if my computer 2</a>
+							</h3>
+							<div class="collapse">
+								<div class="answer">
+									<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
+								</div>
+							</div>
+						</div>
+						<div class="faqEntry">
+							<h3 class="question">
+								<a class="link_collapse" href="#">How can I tell if my computer 3</a>
+							</h3>
+							<div class="collapse">
+								<div class="answer">
+									<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
+								</div>
+							</div>
+						</div>
+						<div class="faqEntry">
+							<h3 class="question">
+								<a class="link_collapse" href="#">How can I tell if my computer 3</a>
+							</h3>
+							<div class="collapse">
+								<div class="answer">
+									<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
+								</div>
+							</div>
+						</div>
+						<div class="faqEntry">
+							<h3 class="question">
+								<a class="link_collapse" href="#">How can I tell if my computer 3</a>
+							</h3>
+							<div class="collapse">
+								<div class="answer">
+									<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
+								</div>
+							</div>
+						</div>
+						<div class="faqEntry">
+							<h3 class="question">
+								<a class="link_collapse" href="#">How can I tell if my computer 3</a>
+							</h3>
+							<div class="collapse">
+								<div class="answer">
+									<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
+								</div>
+							</div>
+						</div>
+						<div class="faqEntry">
+							<h3 class="question">
+								<a class="link_collapse" href="#">How can I tell if my computer 3</a>
+							</h3>
+							<div class="collapse">
+								<div class="answer">
+									<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
+								</div>
+							</div>
+						</div>
+						<div class="faqEntry">
+							<h3 class="question">
+								<a class="link_collapse" href="#">How can I tell if my computer 3</a>
+							</h3>
+							<div class="collapse">
+								<div class="answer">
+									<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
+								</div>
+							</div>
+						</div>
+						<div class="faqEntry">
+							<h3 class="question">
+								<a class="link_collapse" href="#">How can I tell if my computer 3</a>
+							</h3>
+							<div class="collapse">
+								<div class="answer">
+									<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
+								</div>
+							</div>
+						</div>
+						<div class="faqEntry">
+							<h3 class="question">
+								<a class="link_collapse" href="#">How can I tell if my computer 3</a>
+							</h3>
+							<div class="collapse">
+								<div class="answer">
+									<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
+								</div>
+							</div>
+						</div>
+						<div class="faqEntry">
+							<h3 class="question">
+								<a class="link_collapse" href="#">How can I tell if my computer 3</a>
+							</h3>
+							<div class="collapse">
+								<div class="answer">
+									<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
+								</div>
+							</div>
+						</div>
+						<div class="faqEntry">
+							<h3 class="question">
+								<a class="link_collapse" href="#">How can I tell if my computer 3</a>
+							</h3>
+							<div class="collapse">
+								<div class="answer">
+									<p class="para">To find out if your computer is running a 32-bit or 64-bit version of</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+			</div>
+			<div class="item">
+			<article id="contact-us">
+				<div class="section-inner">
+					<section class="info">
+						<dl>
+							<dd class="phone"><strong>Ngo Minh Tri</strong></dd>
+						</dl>
+						<dl>
+							<dd class="phone"><strong>0987654321</strong></dd>
+							<dd class="address"><strong>258/21 CMT8 St. Dist 3 HCMC</strong></dd>
+						</dl>
+					</section>
+					<h2>Contact Us</h2>
+					<p class="para">If you are any question, please contact us!</p>
+					<br/><br/>
+					<section class="map">
+						<figure> </figure>
+					</section>
+					<section class="form">
+						<form class="contact-form" method="post" action="index.php/site/contact" id="contact-form">
+							<p class="single-line">
+								<label for="ContactForm_name"><span class="required">*</span>Name</label>
+								<input type="text" id="ContactForm_name" name="ContactForm[name]" placeholder="Input Your Name" required="true">
+							</p>
+							<p class="single-line">
+								<label for="ContactForm_email"><span class="required">*</span> Email</label>
+								<input type="email" placeholder="Input Your Email" id="ContactForm_email" name="ContactForm[email]" required="required">
+							</p>
+							<p class="single-line">
+								<label for="ContactForm_phone"><span class="required">*</span> Phone</label>
+								<input type="text" id="ContactForm_phone" name="ContactForm[phone]" placeholder="Input Phone" required="true">                	
+							</p>
+							<p class="single-line">
+								<label for="ContactForm_subject"><span class="required">*</span> Subject</label>
+								<input type="text" id="ContactForm_subject" name="ContactForm[subject]" placeholder="Input Subject" required="true">                	
+							</p>
+							<p class="multi-line">
+								<label for="ContactForm_body"><span class="required">*</span> Content</label>
+								<textarea id="ContactForm_body" name="ContactForm[body]" required="true" cols="50" rows="6"></textarea></p>
+							<div class="buttons">
+								<button type="submit">
+									<span><span>Send</span></span>
+							</button>
+							</div>					
+						</form>
+					</section>
+				</div>
+			</article>
+			</div>
+		</div>		
+	</div>
+	<footer class="main">
+		<section class="social">
 			<ul>
-				
+				<li><a class="rss" href="/rss/" title="Rss">Rss</a></li>
+				<li><a class="twitter" href="/twitter/" title="Connect Twitter">Twitter</a></li>
+				<li><a class="linkedin" href="/linkedin/" title="Connect Linkedin">Linkedin</a></li>
+				<li><a class="facebook" href="/facebook/" title="Connect Facebook">Facebook</a></li>
+				<li><a class="googleplus" href="/google/" title="Connect Google Plus">Google Plus</a></li>
+			</ul>
+		</section>
+		<section class="copyright">
+			<ul>
+				<li>&copy; 2013 Mucinis. All right reserved</li>
+				<li>Term &amp; Condition</li>
+				<li>Privacy</li>
 			</ul>
 		</section>
 	</footer>
-	<script id="tooltip-tpl" type="text/html">
-		<span class="tooltip"><b class="arrow"></b><span class="content"><%= text %></span></span>
-	</script>
-	<script id="filter-tpl" type="text/html">
-		<div class="filter">
-			<b></b>
-			<ul>
-				<li class="active">Everything</li>
-				<li>Web</li>
-				<li>Print</li>
-				<li>Service</li>
-			</ul>
-			<span class="thumb"><b></b><span></span></span>
-		</div>
-	</script>
-	</div>	
+</div>
+<script id="tooltip-tpl" type="text/html">
+	<span class="tooltip"><b class="arrow"></b><span class="content"><%= text %></span></span>
+</script>
+<script id="filter-tpl" type="text/html">
+	<div class="filter">
+		<b></b>
+		<ul>
+			<li class="active">Everything</li>
+			<li>Website</li>
+			<li>Design Print</li>
+			<li>Service</li>
+		</ul>
+		<span class="thumb"><b></b><span></span></span>
+	</div>
+</script>
+<script id="indicators-tpl" type="text/html">
+	<div class="indicators">
+		<span class="progress">Sending message...</span>
+		<span class="success">Message sent successfully</span>
+		<span class="error">Error sending message</span>
+	</div>
+</script>
 </body>
 </html> 
