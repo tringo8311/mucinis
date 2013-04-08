@@ -1,0 +1,26 @@
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+
+nav.main ul {
+	left: 0;
+	top: 0;
+}
+.scroll-section-container .section-inner {
+	padding: 5px;
+}
+.scroll-section-container .items .item{
+	padding: 0;
+	min-width: 768px;
+	max-width: 1000px;
+}
+footer.main {
+	background: #00ABBC;
+	position: fixed;
+}
+footer.main .copyright {
+	padding-left: 200px;
+}
+footer.main .social {
+	text-align: center;
+}
+
+}

@@ -6,10 +6,13 @@
 <!--[if gt IE 9]><!--><html lang="en" class="no-js"><!--<![endif]-->
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
-	<title>Mucinis</title>
+	<title>Mucinis</title>	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 	<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-	<link rel="stylesheet" href="./assets/css/font.css" media="screen" />
 	<link rel="stylesheet" href="./assets/css/style.css" media="screen" />
+	<link rel="stylesheet" href="./assets/css/medium.css" media="screen" />
+	<link rel="stylesheet" href="./assets/css/narrow.css" media="screen" />
+	<link rel="stylesheet" href="./assets/css/font.css" media="screen" />
 	<link rel="stylesheet" href="./assets/css/jScrollPane.css" media="screen" />
 	<!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -38,63 +41,61 @@
 </head>
 <body>
 <div id="wrap">
+	<div id="loading" class="loading"></div>
 	<div class="arrow prev">
 		<div class="altColor"></div>
 	</div>
 	<div class="arrow next">
 		<div class="altColor"></div>
 	</div>
-	<header class="main">
-		<div class="logo">
-			<a href="#homepage" class="scroll-to" >Mucinis</a>
-			<p class="slogan">The plat world</p>
-		</div>
+	<header class="main">		
+		<nav class="main">
+			<ul>
+				<li class="hex-1">
+					<a href="/#/home" class="scroll-to" title="Home">
+						<span>Home</span>
+					</a>
+				</li>				
+				<li class="hex-2">
+					<a href="/#/about-us" class="scroll-to" title="About Us">
+						<span>About Us</span>
+					</a>
+				</li>
+				<li class="hex-3">
+					<a href="#service" class="scroll-to" title="Service">
+						<span>Service</span>
+					</a>
+				</li>
+				<li class="hex-4">
+					<a href="#project" class="scroll-to" title="Project">
+						<span>Project</span>
+					</a>
+				</li>
+				<!--
+				<li class="hex-5"></li>
+				<li class="hex-6"></li>-->
+				<li class="hex-7">
+					<a href="/blog" title="Blog">
+						<span>Blog</span>
+					</a>
+				</li>
+				<li class="hex-8">
+					<a href="#/faqs" class="scroll-to" title="FAQs">
+						<span>FAQs</span>
+					</a>
+				</li>
+				<li class="hex-9">
+					<a href="#/contact-us" class="scroll-to" title="Contact Us">
+						<span>Contact Us</span>
+					</a>
+				</li>
+			</ul>
+		</nav>		
 	</header>
 	<div class="scroll-section-container">
 		<div class="items">	
-			<div class="item" id="landing">
-				<nav class="main">
-					<ul>
-						<li class="hex-1">
-							<a href="/#/home" class="scroll-to" title="Home">
-								<span>Home</span>
-							</a>
-						</li>				
-						<li class="hex-2">
-							<a href="/#/about-us" class="scroll-to" title="About Us">
-								<span>About Us</span>
-							</a>
-						</li>
-						<li class="hex-3">
-							<a href="#service" class="scroll-to" title="Service">
-								<span>Service</span>
-							</a>
-						</li>
-						<li class="hex-4">
-							<a href="#project" class="scroll-to" title="Project">
-								<span>Project</span>
-							</a>
-						</li>
-						<li class="hex-5"><a href="#" title="Space"></a></li>
-						<li class="hex-6"><a href="#" title="Space"></a></li>
-						<li class="hex-7">
-							<a href="/blog" title="Blog">
-								<span>Blog</span>
-							</a>
-						</li>
-						<li class="hex-8">
-							<a href="#/faqs" class="scroll-to" title="FAQs">
-								<span>FAQs</span>
-							</a>
-						</li>
-						<li class="hex-9">
-							<a href="#/contact-us" class="scroll-to" title="Contact Us">
-								<span>Contact Us</span>
-							</a>
-						</li>
-					</ul>
-				</nav>		
-				<article id="introduction" class="content">			
+			<div class="item" id="landing">						
+				<article id="intro" class="content">			
 					<a id="home" name="home">+</a>
 					<h2>Mucinis Group</h2>
 					<div class="">
@@ -109,49 +110,120 @@
 					<h2>About Us</h2>
 					<div class="scroll">
 						<ul class="thumbnails">
-							<li class="website">
-								<figure class="thumbnail">
-									<a href="#/project/1" class="image"><img src="assets/images/thumb_academy.jpg" alt="123"></a>
-								</figure>
-								<figcaption class="title">Lorn</figcaption>										
+							<li class="intro">
+								<figure class="portrait">
+									<div class="mask">&nbsp;</div>
+									<div class="img-tile hover-tile">
+										<div class="hover-img">
+											<img src="assets/images/featured1.jpg" alt="">
+										</div>
+										<div class="hover-buttons">
+											<div data-num="1" class="hover-button photo-button" rel="#aboutus1"><span></span></div>
+										</div>
+									</div>
+								</figure>								
+								<figcaption class="meta">
+									<p>Vu Chi</p>
+									<p>Senior Web developer</p>
+								</figcaption>										
 							</li>
-							<li class="design-print">
-								<figure class="thumbnail">
-									<a href="#/project/2" class="image"><img src="assets/images/thumb_academy.jpg" alt="123"></a>
-								</figure>
-								<figcaption class="title">Lorn</figcaption>
+							<li class="intro">
+								<figure class="portrait">
+									<div class="mask">&nbsp;</div>
+									<div class="img-tile hover-tile">
+										<div class="hover-img">
+											<img src="assets/images/featured1.jpg" alt="">
+										</div>
+										<div class="hover-buttons">
+											<div data-src="http://cpeople.ru/wp-content/themes/cpeople/img/slides/corporate/01_480x300.jpg" data-num="1" class="hover-button photo-button"><span></span></div>
+										</div>
+									</div>
+								</figure>								
+								<figcaption class="meta">
+									<p>Vu Chi</p>
+									<p>Senior Web developer</p>
+								</figcaption>										
 							</li>
-							<li class="service">
-								<figure class="thumbnail">
-									<a href="#/project/3" class="image"><img src="assets/images/thumb-1.jpg" alt="123"></a>
-								</figure>
-								<figcaption class="title">Lorn</figcaption>
+							<li class="intro">
+								<figure class="portrait">
+									<div class="mask">&nbsp;</div>
+									<div class="img-tile hover-tile">
+										<div class="hover-img">
+											<img src="assets/images/featured1.jpg" alt="">
+										</div>
+										<div class="hover-buttons">
+											<div data-src="http://cpeople.ru/wp-content/themes/cpeople/img/slides/corporate/01_480x300.jpg" data-num="1" class="hover-button photo-button"><span></span></div>
+										</div>
+									</div>
+								</figure>								
+								<figcaption class="meta">
+									<p>Vu Chi</p>
+									<p>Senior Web developer</p>
+								</figcaption>									
 							</li>
-							<li class="service">
-								<figure class="thumbnail">
-									<a href="#/project/4" class="image"><img src="assets/images/thumb_academy.jpg" alt="123"></a>
-								</figure>
-								<figcaption class="title">Lorn</figcaption>
+							<li class="intro">
+								<figure class="portrait">
+									<div class="mask">&nbsp;</div>
+									<div class="img-tile hover-tile">
+										<div class="hover-img">
+											<img src="assets/images/featured1.jpg" alt="">
+										</div>
+										<div class="hover-buttons">
+											<div data-src="http://cpeople.ru/wp-content/themes/cpeople/img/slides/corporate/01_480x300.jpg" data-num="1" class="hover-button photo-button"><span></span></div>
+										</div>
+									</div>
+								</figure>								
+								<figcaption class="meta">
+									<p>Vu Chi</p>
+									<p>Senior Web developer</p>
+								</figcaption>									
 							</li>
-							<li class="service">
-								<figure class="thumbnail">
-									<a href="#/project/4" class="image"><img src="assets/images/thumb-1.jpg" alt="123"></a>
-								</figure>
-								<figcaption class="title">Lorn</figcaption>
+							<li class="intro">
+								<figure class="portrait">
+									<div class="mask">&nbsp;</div>
+									<div class="img-tile hover-tile">
+										<div class="hover-img">
+											<img src="assets/images/featured1.jpg" alt="">
+										</div>
+										<div class="hover-buttons">
+											<div data-src="http://cpeople.ru/wp-content/themes/cpeople/img/slides/corporate/01_480x300.jpg" data-num="1" class="hover-button photo-button"><span></span></div>
+										</div>
+									</div>
+								</figure>								
+								<figcaption class="meta">
+									<p>Vu Chi</p>
+									<p>Senior Web developer</p>
+								</figcaption>									
 							</li>
-							<li class="service">
-								<figure class="thumbnail">
-									<a href="#/project/4" class="image"><img src="assets/images/thumb-1.jpg" alt="123"></a>
-								</figure>
-								<figcaption class="title">Lorn</figcaption>
-							</li>
-							<li class="service">
-								<figure class="thumbnail">
-									<a href="#/project/4" class="image"><img src="assets/images/thumb_academy.jpg" alt="123"></a>
-								</figure>
-								<figcaption class="title">Lorn</figcaption>
+							<li class="intro">
+								<figure class="portrait">
+									<div class="mask">&nbsp;</div>
+									<div class="img-tile hover-tile">
+										<div class="hover-img">
+											<img src="assets/images/featured1.jpg" alt="">
+										</div>
+										<div class="hover-buttons">
+											<div data-src="http://cpeople.ru/wp-content/themes/cpeople/img/slides/corporate/01_480x300.jpg" data-num="1" class="hover-button photo-button"><span></span></div>
+										</div>
+									</div>
+								</figure>								
+								<figcaption class="meta">
+									<p>Vu Chi</p>
+									<p>Senior Web developer</p>
+								</figcaption>								
 							</li>
 						</ul>
+					</div>
+					<!-- first overlay. id attribute matches our selector -->
+					<div class="simple_overlay" id="aboutus1">
+						<!-- large image -->
+						<img src="./assets/images/feature2.jpg" />					 
+						<!-- image details -->
+						<div class="details">
+							<h3>The Barcelona Pavilion</h3>
+							<h4>Barcelona, Spain</h4>
+							<p>The content ...</p>
+						</div>
 					</div>
 				</div>
 			</article>
@@ -205,7 +277,7 @@
 										<img src="http://farm1.static.flickr.com/114/299183878_4feac12b04.jpg" />
 									  </div>
 									  <div class="item">
-										<img src="http://farm1.static.flickr.com/200/507751258_5f13e3d802.jpg" />
+										<img src="./assets/images/feature2.jpg" />
 									  </div>
 									  <div class="item">
 										<img src="http://farm1.static.flickr.com/30/37446217_14bc95631a.jpg" />
@@ -269,7 +341,7 @@
 					<div style="padding: 10px 0">
 						<a href="#" class="link_expandAll">Show all</a>
 					</div>
-					<div class="vscroll">
+					<div class="scroll">
 						<div class="faqEntry">
 							<h3 class="question">
 								<a class="link_collapse" href="#">How can I tell if my computer 1</a>
@@ -399,53 +471,56 @@
 				<div class="section-inner">
 					<section class="info">
 						<dl>
-							<dd class="phone"><strong>Ngo Minh Tri</strong></dd>
-						</dl>
-						<dl>
+							<dd><strong>Vu Chi</strong></dd>
 							<dd class="phone"><strong>0987654321</strong></dd>
 							<dd class="address"><strong>258/21 CMT8 St. Dist 3 HCMC</strong></dd>
 						</dl>
 					</section>
 					<h2>Contact Us</h2>
 					<p class="para">If you are any question, please contact us!</p>
-					<br/><br/>
-					<section class="map">
-						<figure> </figure>
-					</section>
-					<section class="form">
-						<form class="contact-form" method="post" action="index.php/site/contact" id="contact-form">
-							<p class="single-line">
-								<label for="ContactForm_name"><span class="required">*</span>Name</label>
-								<input type="text" id="ContactForm_name" name="ContactForm[name]" placeholder="Input Your Name" required="true">
-							</p>
-							<p class="single-line">
-								<label for="ContactForm_email"><span class="required">*</span> Email</label>
-								<input type="email" placeholder="Input Your Email" id="ContactForm_email" name="ContactForm[email]" required="required">
-							</p>
-							<p class="single-line">
-								<label for="ContactForm_phone"><span class="required">*</span> Phone</label>
-								<input type="text" id="ContactForm_phone" name="ContactForm[phone]" placeholder="Input Phone" required="true">                	
-							</p>
-							<p class="single-line">
-								<label for="ContactForm_subject"><span class="required">*</span> Subject</label>
-								<input type="text" id="ContactForm_subject" name="ContactForm[subject]" placeholder="Input Subject" required="true">                	
-							</p>
-							<p class="multi-line">
-								<label for="ContactForm_body"><span class="required">*</span> Content</label>
-								<textarea id="ContactForm_body" name="ContactForm[body]" required="true" cols="50" rows="6"></textarea></p>
-							<div class="buttons">
-								<button type="submit">
-									<span><span>Send</span></span>
-							</button>
-							</div>					
-						</form>
-					</section>
+					<div>
+						<section class="map">
+							<figure> </figure>
+						</section>
+						<section class="form">
+							<form class="contact-form" method="post" action="index.php/site/contact" id="contact-form">
+								<p class="single-line">
+									<label for="ContactForm_name"><span class="required">*</span>Name</label>
+									<input type="text" id="ContactForm_name" name="ContactForm[name]" placeholder="Input Your Name" required="true">
+								</p>
+								<p class="single-line">
+									<label for="ContactForm_email"><span class="required">*</span> Email</label>
+									<input type="email" placeholder="Input Your Email" id="ContactForm_email" name="ContactForm[email]" required="required">
+								</p>
+								<p class="single-line">
+									<label for="ContactForm_phone"><span class="required">*</span> Phone</label>
+									<input type="text" id="ContactForm_phone" name="ContactForm[phone]" placeholder="Input Phone" required="true">                	
+								</p>
+								<p class="single-line">
+									<label for="ContactForm_subject"><span class="required">*</span> Subject</label>
+									<input type="text" id="ContactForm_subject" name="ContactForm[subject]" placeholder="Input Subject" required="true">                	
+								</p>
+								<p class="multi-line">
+									<label for="ContactForm_body"><span class="required">*</span> Content</label>
+									<textarea id="ContactForm_body" name="ContactForm[body]" required="true" cols="50" rows="6"></textarea></p>
+								<div class="buttons">
+									<button type="submit">
+										<span><span>Send</span></span>
+								</button>
+								</div>					
+							</form>
+						</section>
+					</div>
 				</div>
 			</article>
 			</div>
 		</div>		
 	</div>
 	<footer class="main">
+		<div class="logo">
+			<a href="#homepage" class="scroll-to" >Mucinis</a>
+			<p class="slogan">The plat world</p>
+		</div>
 		<section class="social">
 			<ul>
 				<li><a class="rss" href="/rss/" title="Rss">Rss</a></li>
