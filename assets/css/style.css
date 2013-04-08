@@ -161,6 +161,8 @@ header.fixed ul li{
 #wrap{
 	 /*background: transparent url(../images/bg_body.jpg) no-repeat top left;*/
 	overflow: hidden;
+	max-height: 640px;
+	position: relative;
 }
 .arrow {
     background: #000 repeat scroll 0 0 transparent;
@@ -300,7 +302,7 @@ nav.active{
 }
 nav.active ul{
 	top: 10px;
-	left:40px;
+	left: 10px;
 	transition: all 1s ease;
 }
 nav.active ul li{
@@ -338,7 +340,7 @@ nav.active ul li{
 	background-color: transparent;
 }
 .scroll-section-container .items {
-	width:20000em;
+	width:100%;
 	position:relative;
 	clear:both;
 	margin:0;
@@ -347,15 +349,15 @@ nav.active ul li{
 }
 .scroll-section-container > .items > .item {
 	float:left;
-	display:block;	
-	background-color: #00ABBC;
+	display:none;	
+	background-color: #00ABBC;	
 }
 .scroll-section-container h2{
 	padding: 0px 0px;
 	margin-bottom: 10px;
 }
 .scroll-section-container .section-inner{
-	width: 70%;
+	width: 71%;
 	margin: 0 auto;
 	padding: 20px 5%;
 	position: relative;
@@ -415,7 +417,7 @@ html.fontface section.main{
 	font-size: 100%;*/
 }
 footer.main{
-	position: fixed;
+	position: relative;
 	left: 0px;
 	bottom: 10px;
 	font-size: .8em;
@@ -509,7 +511,7 @@ footer.main .social li a.googleplus:hover{
 #about-us .intro{
 	width: 210px;
 	float: left;
-	margin: 10px 16px 5px 16px;
+	margin: 10px 26px 5px 26px;
 }
 #about-us .intro .portrait {
     display: inline-block;
@@ -780,7 +782,7 @@ div.faqEntry div.answer :before{
 .contact-form label{
 	width: 100px;
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: middle;
 	float: left;
 	text-align: right;
 	padding: 2px 5px;
@@ -795,13 +797,15 @@ div.faqEntry div.answer :before{
 	color: #c0c0c0;
 }
 .contact-form textarea{
-	width: 304px;
+	width: 294px;
 	background: none repeat scroll 0 0 #fff;
 	color: #c0c0c0;
 	font-size: .9em;
 	border: 1px solid #ccc;
 	float: left;
 	clear: right;
+	font-family: inherit;
+	padding: 5px;
 }
 .contact-form .buttons {
     float: right;

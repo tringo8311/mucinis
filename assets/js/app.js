@@ -79,15 +79,15 @@
 })(jQuery);
 (function(){
 	
-	g = function () {},
+	g = function () {console.log("about us");},
 	h = $(document),
 	i = [].slice,
 	k = Backbone.View.extend({
-		initialize: function (a) {
-			this.queue("init", "show", "hide");
+		initialize: function (a) {			
+			//this.queue("init", "show", "hide");
 		},
 		queue: function () {
-			_.each(arguments, function (a) {
+			_.each(arguments, function (a) {				
 				var b = this[a];
 				b !== g && (this[a] = function () {
 					var a = [b, this].concat(_.toArray(arguments));
@@ -101,10 +101,8 @@
 	});
 	// About Us :: View
 	aboutUsView = k.extend({
-		init: function () {
+		init: function () {			
 			// Overlay
-			//console.log(this.$("div.hover-button[rel]").overlay());
-			//jQuery("div.hover-button[rel]").overlay({
 			this.$("div.hover-button[rel]").overlay({
 				mask: {
 					color: '#ebecff',
@@ -113,14 +111,12 @@
 				}
 			});
 			// End Overlay
-		},
-		el: "#about-us"
+		}		
 	});
 	
 	// Project :: View
 	projectView = k.extend({
 		init: function () {
-			alert("thanks you");
 			$("#main").scrollable({
 				// basic settings
 				vertical: true,
@@ -155,14 +151,15 @@
 				return false;
 			});
 			this.$(".link_expandAll").click(function(event){
+				//console.log(this);
 				if(jQuery(this).hasClass('link_expandAll')){
 					jQuery(this).removeClass('link_expandAll').addClass('link_collapseAll');
 					jQuery(this).text("Hide All");
-					this.$(".collapse").removeClass('collapse').addClass('expand');
+					jQuery(".collapse").removeClass('collapse').addClass('expand');
 				}else{
 					jQuery(this).removeClass('link_collapseAll').addClass('link_expandAll');
 					jQuery(this).text("Show All");
-					this.$(".expand").removeClass('expand').addClass('collapse');
+					jQuery(".expand").removeClass('expand').addClass('collapse');
 				}
 				//$('.vscroll').jScrollPane({scrollbarWidth:20, scrollbarMargin:10});
 				return false;
@@ -173,9 +170,9 @@
 	// contact Us :: View
 	contactUsView = k.extend({
 		init: function () {
-			/*this.$(".map figure").gmaps({
+			this.$(".map figure").gmaps({
 				address: this.$("dd.address").text()
-			});*/
+			});
 			var a = _.template($("#indicators-tpl").html(), {});
 			this.$("form").append(a).h5f().submit(function (a) {
 				a.preventDefault();
@@ -206,7 +203,7 @@
 				}
 			})
 		},
-		el: "#contact"
+		el: "#contact-us"
 	});	
 	
 	var PlayersAppRouter = Backbone.Router.extend({
@@ -216,7 +213,8 @@
 	    index: function () {
 	    	// Auto width
 			$(".scroll-section-container .item:not(:first)").width($(window).width()).find(".section-inner").css('min-height', '480px');
-			// select #flowplanes and make it scrollable. use circular and navigator plugins
+			$("nav.main ul").tabs(".scroll-section-container > items", {history : true});
+			/*// select #flowplanes and make it scrollable. use circular and navigator plugins
 			$(".scroll-section-container").scrollable({circular: false, mousewheel: false}).navigator({
 				// select #flowtabs to be used as navigator
 				navi: "nav.main",
@@ -234,7 +232,7 @@
 				}else{
 					$("nav.main").removeClass('active');
 				}
-			}).end();
+			}).end();*/
 	    },
 	});
 	
@@ -245,7 +243,7 @@
 		var root = this;		
 		$("#loading").hide();
 		
-		var about_us = new aboutUsView();
+		var about_us = new aboutUsView({el: "#about-us"});
 		about_us.init();
 		
 		var project = new projectView();
