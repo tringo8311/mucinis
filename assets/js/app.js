@@ -78,6 +78,7 @@
     }
 })(jQuery);
 (function(){
+	
 	g = function () {},
 	h = $(document),
 	i = [].slice,
@@ -102,6 +103,8 @@
 	aboutUsView = k.extend({
 		init: function () {
 			// Overlay
+			//console.log(this.$("div.hover-button[rel]").overlay());
+			//jQuery("div.hover-button[rel]").overlay({
 			this.$("div.hover-button[rel]").overlay({
 				mask: {
 					color: '#ebecff',
@@ -117,6 +120,7 @@
 	// Project :: View
 	projectView = k.extend({
 		init: function () {
+			alert("thanks you");
 			$("#main").scrollable({
 				// basic settings
 				vertical: true,
@@ -169,9 +173,9 @@
 	// contact Us :: View
 	contactUsView = k.extend({
 		init: function () {
-			this.$(".map figure").gmaps({
+			/*this.$(".map figure").gmaps({
 				address: this.$("dd.address").text()
-			});
+			});*/
 			var a = _.template($("#indicators-tpl").html(), {});
 			this.$("form").append(a).h5f().submit(function (a) {
 				a.preventDefault();
@@ -202,38 +206,57 @@
 				}
 			})
 		},
-		el: "#faqs"
+		el: "#contact"
+	});	
+	
+	var PlayersAppRouter = Backbone.Router.extend({
+	    routes: {
+	        '': 'index',
+	    },
+	    index: function () {
+	    	// Auto width
+			$(".scroll-section-container .item:not(:first)").width($(window).width()).find(".section-inner").css('min-height', '480px');
+			// select #flowplanes and make it scrollable. use circular and navigator plugins
+			$(".scroll-section-container").scrollable({circular: false, mousewheel: false}).navigator({
+				// select #flowtabs to be used as navigator
+				navi: "nav.main",
+				// select A tags inside the navigator to work as items (not direct children)
+				naviItem: 'a.scroll-to',
+				// assign "current" class name for the active A tag inside navigator
+				activeClass: 'current',
+				// make browser's back button work
+				history: true
+			});
+			$(".scroll-section-container").bind("onSeek", function() { 
+				// inside callbacks the "this" variable is a reference to the API
+				if($(this).data("scrollable").getIndex()>0){
+					$("nav.main").addClass('active');
+				}else{
+					$("nav.main").removeClass('active');
+				}
+			}).end();
+	    },
 	});
 	
+	window.app = new PlayersAppRouter;
 	Backbone.history.start();
-	var root = this;
+		
 	jQuery(document).ready(function($) {
+		var root = this;		
 		$("#loading").hide();
+		
 		var about_us = new aboutUsView();
 		about_us.init();
-		// Auto width
-		$(".scroll-section-container .item:not(:first)").width($(window).width()).find(".section-inner").css('min-height', '480px');
-		// select #flowplanes and make it scrollable. use circular and navigator plugins
-		$(".scroll-section-container").scrollable({circular: false, mousewheel: false}).navigator({
-			// select #flowtabs to be used as navigator
-			navi: "nav.main",
-			// select A tags inside the navigator to work as items (not direct children)
-			naviItem: 'a.scroll-to',
-			// assign "current" class name for the active A tag inside navigator
-			activeClass: 'current',
-			// make browser's back button work
-			history: true
-		});
-		//console.log(api);*/
-		//console.dir($(".scroll-section-container").scrollable());
-		$(".scroll-section-container").bind("onSeek", function() { 
-			// inside callbacks the "this" variable is a reference to the API
-			if($(this).data("scrollable").getIndex()>0){
-				$("nav.main").addClass('active');
-			}else{
-				$("nav.main").removeClass('active');
-			}
-		}).end();
+		
+		var project = new projectView();
+		project.init();
+		
+		var faq = new faqView();
+		faq.init();
+		
+		var contact_us = new contactUsView();
+		contact_us.init();
+		
 		//jQuery(".scroll").niceScroll({cursorcolor:"#00F"});
 	});
 }).call(this);

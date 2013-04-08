@@ -90,10 +90,10 @@ footer.main .social {
 	margin: 0 auto;
 }
 .contact-form input[type="text"], .contact-form input[type="email"] {
-	width: 200px;
+	width: 300px;
 }
 .contact-form textarea{
-	width: 204px;
+	width: 304px;
 }
 
 }
