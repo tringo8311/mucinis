@@ -113,7 +113,7 @@
 			// End Overlay
 		}		
 	});
-	
+	serviceView = k.extend({});
 	// Project :: View
 	projectView = k.extend({
 		init: function () {
@@ -206,55 +206,65 @@
 		el: "#contact-us"
 	});	
 	
-	var PlayersAppRouter = Backbone.Router.extend({
-	    routes: {
-	        '': 'index',
-	    },
-	    index: function () {
-	    	// Auto width
-			$(".scroll-section-container .item:not(:first)").width($(window).width()).find(".section-inner").css('min-height', '480px');
-			$("nav.main ul").tabs(".scroll-section-container > items", {history : true});
-			/*// select #flowplanes and make it scrollable. use circular and navigator plugins
-			$(".scroll-section-container").scrollable({circular: false, mousewheel: false}).navigator({
-				// select #flowtabs to be used as navigator
-				navi: "nav.main",
-				// select A tags inside the navigator to work as items (not direct children)
-				naviItem: 'a.scroll-to',
-				// assign "current" class name for the active A tag inside navigator
-				activeClass: 'current',
-				// make browser's back button work
-				history: true
-			});
-			$(".scroll-section-container").bind("onSeek", function() { 
-				// inside callbacks the "this" variable is a reference to the API
-				if($(this).data("scrollable").getIndex()>0){
-					$("nav.main").addClass('active');
-				}else{
-					$("nav.main").removeClass('active');
-				}
-			}).end();*/
-	    },
-	});
-	
-	window.app = new PlayersAppRouter;
-	Backbone.history.start();
-		
 	jQuery(document).ready(function($) {
-		var root = this;		
-		$("#loading").hide();
+		var PlayersAppRouter = Backbone.Router.extend({
+			initialize: function() {
+				$("#loading").hide();
+				// Auto width
+				$(".scroll-section-container .item:not(:first)").width($(window).width()).find(".section-inner").css('min-height', '480px');
+				jQuery("nav.main ul").tabs(".scroll-section-container > .panes > .item", { tabs : "a.scroll-to", history : true});
+				jQuery("nav.main ul").bind("onClick", function(event, tabIndex) {
+					if(tabIndex>0){
+						$("nav.main").addClass('active');
+					}else{
+						$("nav.main").removeClass('active');
+					}
+				});
+				// window.location.hash = 'list' if ! _.include( _.keys(@routes),(window.location.hash || '').replace('#',''))
+			},
+			routes: {
+				"about-us" : "aboutUsRoute",
+				"service" : "serviceRoute",
+				"project" : "projectRoute",
+				"contact-us" : "contactUsRoute",
+				"*actions": "defaultRoute",
+			},
+			defaultRoute: function () {
+								
+			},
+			aboutUsRoute: function(){				
+				APP.ABOUTUS.init();
+			},
+			serviceRoute: function(){
+				APP.SERVICE.init();
+			},
+			projectRoute: function(){
+				APP.PROJECT.init();
+			},
+			faqRoute: function(){
+				APP.FAQ.init();
+			},
+			contactUsRoute: function(){
+				APP.CONTACTUS.init();
+			}		
+		});
+		var APP = {};	
+		APP.ROUTER = new PlayersAppRouter();
 		
-		var about_us = new aboutUsView({el: "#about-us"});
-		about_us.init();
+		APP.ABOUTUS = new aboutUsView({el: "#about-us"});
 		
-		var project = new projectView();
-		project.init();
+		APP.SERVICE = new serviceView();
 		
-		var faq = new faqView();
-		faq.init();
+		APP.PROJECT = new projectView();
+		//APP.PROJECT.init();
 		
-		var contact_us = new contactUsView();
-		contact_us.init();
+		APP.FAQ = new faqView();
+		//APP.FAQ.init();
 		
+		APP.CONTACTUS = new contactUsView();
+		//APP.CONTACTUS.init();*/
+		
+		Backbone.history.start();
 		//jQuery(".scroll").niceScroll({cursorcolor:"#00F"});
 	});
 }).call(this);

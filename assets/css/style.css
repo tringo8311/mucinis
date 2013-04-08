@@ -332,14 +332,14 @@ nav.active ul li{
 	z-index: 100;
 }
 .scroll-section-container{
-	height: 580px;
+	height: 500px;
     width: 1300px;
 	position:relative;
 	overflow:hidden;
 	clear:both;
 	background-color: transparent;
 }
-.scroll-section-container .items {
+.scroll-section-container .panes {
 	width:100%;
 	position:relative;
 	clear:both;
@@ -347,7 +347,7 @@ nav.active ul li{
 	padding:0;
 	border:0;
 }
-.scroll-section-container > .items > .item {
+.scroll-section-container > .panes > .item {
 	float:left;
 	display:none;	
 	background-color: #00ABBC;	
