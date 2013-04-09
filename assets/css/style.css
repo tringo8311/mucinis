@@ -179,13 +179,16 @@ header.fixed ul li{
     width: 120px;
     z-index: 90;
 }
-.arrow.prev {
+.arrow.backward {
     background: url("../images/arrow_left.png") no-repeat scroll 95% center transparent;
     left: 0;
 }
-.arrow.next {
+.arrow.forward {
     background: url("../images/arrow_right.png") no-repeat scroll 5% center transparent;
     right: 0;
+}
+.arrow.disabled{
+	background: none;
 }
 .arrow .altColor {
     /*border: 2px solid #DDDC00;*/
@@ -332,7 +335,7 @@ nav.active ul li{
 	z-index: 100;
 }
 .scroll-section-container{
-	height: 500px;
+	height: 530px;
     width: 1300px;
 	position:relative;
 	overflow:hidden;
@@ -347,6 +350,9 @@ nav.active ul li{
 	padding:0;
 	border:0;
 }
+.scroll-section-container .panes :after{
+	clear: both;
+}
 .scroll-section-container > .panes > .item {
 	float:left;
 	display:none;	
@@ -357,14 +363,15 @@ nav.active ul li{
 	margin-bottom: 10px;
 }
 .scroll-section-container .section-inner{
-	width: 71%;
-	margin: 0 auto;
-	padding: 20px 5%;
+	width: 80%;
+	margin: 0 0 0 10%;
+	padding: 10px 5%;
 	position: relative;
 	overflow: hidden;
 }
 .section-inner .scroll{
 	height: 440px;
+	padding-right: 10px;
 }
 #landing{
 	background: none;
@@ -419,10 +426,11 @@ html.fontface section.main{
 footer.main{
 	position: relative;
 	left: 0px;
-	bottom: 10px;
+	bottom: 0px;
 	font-size: .8em;
 	width: 100%;
 	height: 65px;
+	padding-top: 5px;
 	z-index: 11;
 }
 html.fontface footer.main{
@@ -448,9 +456,8 @@ footer.main ul li:last-child{
 	border-right: none;
 }
 footer.main .copyright{
-	padding-left: 40%;
-	float: left;
-	margin-top: 26px;
+	margin: 26px auto;
+	width: 362px;
 }
 footer.main .copyright li{
 	padding: 5px 0;
@@ -458,7 +465,7 @@ footer.main .copyright li{
 footer.main .social{
 	position: absolute;
     right: 20px;
-    top: 26px;
+    bottom: 0px;
     z-index: 10;
 }
 footer.main .social i{
@@ -509,9 +516,9 @@ footer.main .social li a.googleplus:hover{
     display: table;
 }
 #about-us .intro{
-	width: 210px;
+	width: 230px;
 	float: left;
-	margin: 10px 26px 5px 26px;
+	margin: 10px 56px 5px 0px;
 }
 #about-us .intro .portrait {
     display: inline-block;
@@ -543,11 +550,11 @@ footer.main .social li a.googleplus:hover{
 }
 #about-us .intro .portrait .mask {
     background: url("../images/mask.png") no-repeat scroll 0 0 transparent;
-    bottom: -28px;
-    height: 109px;
-    left: -30px;
+    bottom: 6px;
+    height: 59px;
+    left: 6px;
     position: absolute;
-    width: 113px;
+    width: 83px;
     z-index: 2;
 }
 #about-us .intro .meta{
@@ -873,8 +880,8 @@ div.faqEntry div.answer :before{
     font-size: 14px;
 }
 #contact-us .map {
-    border-radius: 5px 5px 5px 5px;
     box-shadow: 0 1px 4px #B1B3B8, 0 1px white inset;
+	background-color: white;
     clear: both;
     float: right;
     padding: 7px;

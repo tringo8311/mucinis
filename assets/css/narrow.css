@@ -1,10 +1,13 @@
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (min-width: 240px) and (max-width: 767px) {
 
 body {
 	background-image: none;
 }
 header.main {
 	position: static;
+}
+#wrap{
+	max-height: none;
 }
 #intro {
 	left: 0;
@@ -44,11 +47,13 @@ nav.main ul li{
 }
 .scroll-section-container{
 	height: auto;
+	width: 100%;
 }
 .scroll-section-container .section-inner {
 	width: 94%;
 	padding: 10px 3%;
 	max-width: 768px;
+	margin: 0;
 }
 .scroll-section-container .items .item{
 	padding: 0;
@@ -61,9 +66,16 @@ nav.main ul li{
 
 #about-us .intro {
 	width: 240px;
+	margin: 10px 36px 5px 0;
 }
 .section-inner .scroll {
 	height: auto;
+}
+#main_navi li {
+	width: 70px;
+}
+#main_navi li img{
+	display: none;
 }
 footer.main {
 	background: #00ABBC;
@@ -74,26 +86,30 @@ footer.main  .logo{
 	left: 0;
 }
 footer.main .copyright {
-	padding-left: 36%;
 	position: absolute;
-	float: right;
+	right: 5px;
 	margin: 0px;
 }
 footer.main .social {
-	right: none;
-	left: none;
+	right: 5px;	
 }
-
+footer.main .social ul{
+	padding: 0;
+}
 #contact-us .map {
 	float: none;	
 	max-width: 768px;
 	margin: 0 auto;
 }
+.contact-form {
+	margin: 10px auto;
+	float: none;
+}
 .contact-form input[type="text"], .contact-form input[type="email"] {
 	width: 300px;
 }
 .contact-form textarea{
-	width: 304px;
+	width: 295px;
 }
 
 }

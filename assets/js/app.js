@@ -78,11 +78,15 @@
     }
 })(jQuery);
 (function(){
-	
-	g = function () {console.log("about us");},
+	var a = Backbone.Model.extend(),
+	b = Backbone.Collection.extend({
+		model: a
+	}),
+	g = function () {},
 	h = $(document),
 	i = [].slice,
 	k = Backbone.View.extend({
+		flag: false,
 		initialize: function (a) {			
 			//this.queue("init", "show", "hide");
 		},
@@ -95,13 +99,26 @@
 				})
 			}, this)
 		},
+		activate: function (a, b, c) {
+			this.setTitle(), this.loadImages(), a
+		},
 		init: g,
 		show: g,
-		hide: g
+		hide: g,
+		setTitle: function(a){
+			document.title = jQuery("h1.title").text() + " - " + this.$("h2.title").text();
+		},
+		loadImages: function (a) {
+			$("img", this.el).each(function (a, b) {
+				var c = $(b);
+				c.attr("src", c.data("src"))
+			}), this.loadImages = g
+		},		
 	});
 	// About Us :: View
 	aboutUsView = k.extend({
-		init: function () {			
+		init: function (_flag) {
+			this.flag = _flag == undefined ? false : true;
 			// Overlay
 			this.$("div.hover-button[rel]").overlay({
 				mask: {
@@ -111,12 +128,23 @@
 				}
 			});
 			// End Overlay
-		}		
+		},
+		el: "#about-us"
 	});
-	serviceView = k.extend({});
+	// Service :: View
+	serviceView = k.extend({
+		init: function(_flag) {
+			this.flag = _flag == undefined ? false : true;
+			setTimeout(function() {
+				this.$(".scroll").niceScroll({cursorcolor:"#fff", cursorwidth: 5, cursoropacitymin: 0, cursoropacitymax: .7, cursorborderradius: 0, background: '#000'});
+			}, 1000);
+		},
+		el: "#service"
+	});
 	// Project :: View
 	projectView = k.extend({
-		init: function () {
+		init: function (_flag) {
+			this.flag = _flag == undefined ? false : true;
 			$("#main").scrollable({
 				// basic settings
 				vertical: true,
@@ -138,7 +166,8 @@
 	});
 	// FAQs :: View
 	faqView = k.extend({
-		init: function () {
+		init: function (_flag) {
+			this.flag = _flag == undefined ? false : true;
 			// Using backbone for FAQs
 			this.$(".faqEntry .question a").click(function(event){
 				if(jQuery(this).hasClass('link_collapse')){
@@ -169,7 +198,8 @@
 	});
 	// contact Us :: View
 	contactUsView = k.extend({
-		init: function () {
+		init: function (_flag) {
+			this.flag = _flag == undefined ? false : true;
 			this.$(".map figure").gmaps({
 				address: this.$("dd.address").text()
 			});
@@ -211,13 +241,25 @@
 			initialize: function() {
 				$("#loading").hide();
 				// Auto width
-				$(".scroll-section-container .item:not(:first)").width($(window).width()).find(".section-inner").css('min-height', '480px');
-				jQuery("nav.main ul").tabs(".scroll-section-container > .panes > .item", { tabs : "a.scroll-to", history : true});
+				$(".scroll-section-container .item:not(:first) article").width($(window).width()).find(".section-inner").css('min-height', '520px');
+				jQuery("nav.main ul").tabs(".scroll-section-container > .panes > .item", { tabs : "a.scroll-to", history : true, effect: 'horizontal'}).slideshow({clickable: false});
 				jQuery("nav.main ul").bind("onClick", function(event, tabIndex) {
-					if(tabIndex>0){
+					// cancel the default action.
+					// same as using "return false;" as the last line of this code block.
+					event.preventDefault();
+					/* If you have multiple callbacks of the same type this prevents
+					  the rest of the callbacks from being executed. */
+					event.stopImmediatePropagation();
+					
+					if(tabIndex>0){						
 						$("nav.main").addClass('active');
 					}else{
 						$("nav.main").removeClass('active');
+					}
+					// Hash change
+					lHash = $("li a", this).eq(tabIndex).attr("href");
+					if(lHash != window.location.hash){
+						window.location.hash = lHash.replace('#', '');
 					}
 				});
 				// window.location.hash = 'list' if ! _.include( _.keys(@routes),(window.location.hash || '').replace('#',''))
@@ -226,43 +268,52 @@
 				"about-us" : "aboutUsRoute",
 				"service" : "serviceRoute",
 				"project" : "projectRoute",
+				"faqs" : "faqsRoute",
 				"contact-us" : "contactUsRoute",
 				"*actions": "defaultRoute",
 			},
 			defaultRoute: function () {
-								
+				
 			},
-			aboutUsRoute: function(){				
-				APP.ABOUTUS.init();
+			aboutUsRoute: function(){
+				if(!APP.ABOUTUS.flag){
+					APP.ABOUTUS.init(true);
+				}
+				APP.ABOUTUS.activate();
 			},
 			serviceRoute: function(){
-				APP.SERVICE.init();
+				if(!APP.SERVICE.flag){
+					APP.SERVICE.init(true);
+				}
+				APP.SERVICE.activate();
 			},
 			projectRoute: function(){
-				APP.PROJECT.init();
+				if(!APP.PROJECT.flag){
+					APP.PROJECT.init(true);
+				}
+				APP.PROJECT.activate();
 			},
-			faqRoute: function(){
-				APP.FAQ.init();
+			faqsRoute: function(){
+				if(!APP.FAQs.flag){
+					APP.FAQs.init(true);
+				}
+				APP.FAQs.activate();
 			},
 			contactUsRoute: function(){
-				APP.CONTACTUS.init();
+				if(!APP.CONTACTUS.flag){
+					APP.CONTACTUS.init(true);
+				}
+				APP.CONTACTUS.activate();
 			}		
 		});
 		var APP = {};	
 		APP.ROUTER = new PlayersAppRouter();
 		
-		APP.ABOUTUS = new aboutUsView({el: "#about-us"});
-		
-		APP.SERVICE = new serviceView();
-		
+		APP.ABOUTUS = new aboutUsView();		
+		APP.SERVICE = new serviceView();		
 		APP.PROJECT = new projectView();
-		//APP.PROJECT.init();
-		
-		APP.FAQ = new faqView();
-		//APP.FAQ.init();
-		
+		APP.FAQs = new faqView();
 		APP.CONTACTUS = new contactUsView();
-		//APP.CONTACTUS.init();*/
 		
 		Backbone.history.start();
 		//jQuery(".scroll").niceScroll({cursorcolor:"#00F"});
