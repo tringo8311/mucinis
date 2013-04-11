@@ -1,8 +1,12 @@
 @font-face {
-	 src: url(../font/TrajanPro-Regular.otf);
-	 font-family: "TrajanPro";
+	font-family: "TrajanPro";
+	src: url('../font/TrajanPro-Regular.eot'); /* IE9 Compatibility Modes */
+	src: url('../font/TrajanPro-Regular.eot?') format('eot'),  /* IE6-IE8 */
+	src: url(../font/TrajanPro-Regular.otf) format('opentype');
 }
 @font-face {
-	 src: url(../font/MyriadPro-Semibold.otf);
-	 font-family: "MyriadPro";
+	font-family: "MyriadPro";
+	src: url('../font/MyriadPro-Semibold.eot'); /* IE9 Compatibility Modes */
+	src: url('../font/MyriadPro-Semibold.eot?') format('eot'),  /* IE6-IE8 */
+	src: url(../font/MyriadPro-Semibold.otf) format('opentype');
 }

@@ -257,7 +257,7 @@
 						$("nav.main").removeClass('active');
 					}
 					// Hash change
-					lHash = $("li a", this).eq(tabIndex).attr("href");
+					lHash = $("li a.scroll-to", this).eq(tabIndex).attr("href");
 					if(lHash != window.location.hash){
 						window.location.hash = lHash.replace('#', '');
 					}
